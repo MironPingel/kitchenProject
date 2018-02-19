@@ -7,7 +7,7 @@ let libContext = lib.getContext('2d');
 let items = [];
 let cs = null; // cs = currentSelection
 let itemOnMove = false;
-let selectedType = itemTypes["floor60"];
+let selectedType = null;
 let totalPrice = 0;
 let priceText = document.getElementById('totalPrice');
 
@@ -48,6 +48,12 @@ function update(mousePos, canvas) {
     cs.y = mousePos.y - cs.height/2;
     // draw the box that follows the cursor
     cs.draw(context)
+  } else if (selectedType !== null){
+    let sel = itemTypes[selectedType];
+    let x = mousePos.x;
+    let y = mousePos.y;
+    let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price);
+    placeholder.draw(context)
   }
 
   // Draw all items in items array
@@ -96,7 +102,7 @@ can.addEventListener('click', function(evt) {
     }
 
     // if not item is currently being moved, then create a new item onClick
-    if(!itemOnMove && cs) {
+    if(!itemOnMove) {
       placeBox(mousePos);
     }
   }
@@ -111,6 +117,7 @@ can.addEventListener('dblclick', function(evt) {
     if (items[i].isClicked(mousePos)) {
       items.splice(i, 1);
       updatePrice();
+      cs = null;
     }
   }
 }, false);
@@ -125,7 +132,8 @@ can.addEventListener('dblclick', function(evt) {
 // Place new box (add BoxType in the future)
 function placeBox (mousePos) {
   //let randomRGB = "rgb(" + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + ")";
-  let box = new Box(mousePos.x, mousePos.y, selectedType.width, selectedType.height, selectedType.color, selectedType.type, selectedType.price);
+  let sel = itemTypes[selectedType];
+  let box = new Box(mousePos.x, mousePos.y, sel.width, sel.height, sel.color, sel.type, sel.price);
   box = checkBoundries(box);
 
   if (checkCollision(box)) {
@@ -158,7 +166,7 @@ function checkBoundries (item) {
 
 
 function checkCollision (item) {
-  // 1
+
   let iX = item.x;
   let iY = item.y;
   let iW = item.width;

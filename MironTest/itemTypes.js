@@ -40,31 +40,4 @@ itemTypes["wall60"] = {
     "color": 'Peru',
     "title": "Wall 60",
     "price": 2199,
-  };
-
-//JSON
-// itemTypes = {
-//     "floor60": {
-//     "width": 60,
-//     "height": 60,
-//     "color": 'beige',
-//   },
-//
-//   "floor40": {
-//     "width": 40,
-//     "height": 60,
-//     "color": 'beige',
-//   },
-//
-//   "wall30": {
-//     "width": 30,
-//     "height": 30,
-//     "color": 'BurlyWood',
-//   },
-//
-//   "wall60": {
-//     "width": 60,
-//     "height": 30,
-//     "color": 'BurlyWood',
-//   },
-// };
+};

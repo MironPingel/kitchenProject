@@ -3,6 +3,16 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
+
+      .unselectable {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
       body {
         display: flex;
         margin: 0px;
@@ -41,7 +51,7 @@
     <canvas id="can" width="950" height="600"></canvas>
     <div id="right">
       <canvas id="libCan" width="400" height="400"></canvas>
-      <div id="priceContainer">
+      <div id="priceContainer" class="unselectable">
         <h3>Total Price</h3>
         <h6 id="totalPrice">0</h6>
       </div>

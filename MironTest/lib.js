@@ -1,4 +1,4 @@
-let drawnItems = [];
+const drawnItems = [];
 
 // Draw all items in Library (loop through itemTypes array)
 for (var type in itemTypes) {
@@ -19,12 +19,11 @@ for (var type in itemTypes) {
 
 // Regsiter when an item is clicked inside Library
 lib.addEventListener('click', function(evt) {
-  let mousePos = getMousePos(lib,evt);
+  let mousePos = getMousePos(lib, evt);
 
   for (var i = 0; i < drawnItems.length; i++) {
     if (drawnItems[i].isClicked(mousePos)) {
-      cs = drawnItems[i];
-      selectedType = drawnItems[i];
+      selectedType = drawnItems[i].type;
     }
   }
 })
