@@ -1,0 +1,38 @@
+<!doctype html>
+<html language="en">
+    <!-- nmlObject71.html -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Canvas Experiment LXXI</title>
+        <script src='nQuery.js'></script>
+        <script src="canvasObject.js"></script>
+        <script src="CanvasDraw.js"></script>
+        <script src="shapes.js"></script>
+    </head>
+    <body>
+          <label>
+            Create room
+        <label>
+          <input type="number" id="height"/>
+          <input type="number" id="width"/>
+          <button onclick="createC()">Create!</button>
+          <canvas id="myCanvas0" width="0" height="0"
+              style="outline: 1px solid magenta;">
+          <p>Powered by &html; canvas</p>
+      </canvas>
+        <canvas id="myCanvas1" width="300" height="550"
+                style="outline: 1px solid blue;">
+            <p>Powered by &html; canvas</p>
+        </canvas>
+
+    </body>
+    <script>
+      function createC(){
+        var y = document.getElementById("height").value;
+        var z = document.getElementById("width").value;
+        document.getElementById("myCanvas0").style.width = y + "px";
+        document.getElementById("myCanvas0").style.height = z + "px";
+
+      }
+    </script>
+</html>
