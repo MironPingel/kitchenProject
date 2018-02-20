@@ -1,8 +1,8 @@
 let can1 = document.getElementById('canL1');
-// let canContext = can1.getContext('2d');
+let canContext = can1.getContext('2d');
 
 let can2 = document.getElementById('canL2');
-// let can2Context = can2.getContext('2d');
+let can2Context = can2.getContext('2d');
 
 let currentCan = can1;
 let currentContext = currentCan.getContext('2d');
@@ -30,11 +30,13 @@ function getMousePos(canvas, evt) {
 
 
 
-
-
 // Update Canvas on MouseMove
 currentCan.addEventListener('mousemove', function(evt) {
   var mousePos = getMousePos(currentCan, evt);
+  // console.log(`
+  //   ${mousePos.x}
+  //
+  // `);
   update(mousePos, currentCan);
 }, false);
 
@@ -68,13 +70,20 @@ function update(mousePos, canvas) {
     let x = mousePos.x;
     let y = mousePos.y;
     let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
-    placeholder.draw(context)
+    placeholder.draw(currentContext)
   }
 
   // Draw all items in items array
   for (let box of items) {
     if (box) {
-      box.draw(context);
+
+      // Decide which layer to draw them on
+      if (box.layer === "top") {
+        box.draw(canContext);
+      }
+      if (box.layer === "bottom"){
+        box.draw(can2Context);
+      }
     }
   }
 }
@@ -129,6 +138,13 @@ currentCan.addEventListener('click', function(evt) {
         console.log("HIT!");
         // Set global CS (currentSelection) = to the clicked Box
         cs = items[i];
+
+        if (items[i].layer === "top") {
+          currentCan = can2;
+        } else if (items[i].layer === "bottom"){
+          currentCan = can1;
+        }
+
         // Remove the selected box from items array
         items.splice(i, 1);
         // Set state to itemOnMove

@@ -22,22 +22,7 @@ lib.addEventListener('click', function(evt) {
   let mousePos = getMousePos(lib, evt);
   for (var i = 0; i < drawnItems.length; i++) {
     if (drawnItems[i].isClicked(mousePos)) {
-      if (drawnItems[i].layer === "top") {
-        console.log("top");
-
-        can2.style.display = "block";
-        can1.style.display = "none";
-        // can2.style.zIndex = 500;
-        // can1.style.zIndex = 0;
-        currentCan = can2;
-        selectedType = drawnItems[i].type;
-      } else {
-        console.log("bottom");
-        can2.style.zIndex = 0;
-        can1.style.zIndex = 500;
-        currentCan = can1;
-        selectedType = drawnItems[i].type;
-      }
+      selectedType = drawnItems[i].type;
     }
   }
 })

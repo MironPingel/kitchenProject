@@ -451,6 +451,11 @@ canvas {
   border: 10px solid lightgrey;
 }
 
+#right {
+  position: absolute;
+  right: 0px;
+}
+
 #lib {
   flex-grow: 1;
   padding: 1.5%;
@@ -459,7 +464,7 @@ canvas {
 #libCan {
   margin-left: 20px;
   border: none;
-  position: absolute;
+  position: relative;
   right: 0px;
 }
 
