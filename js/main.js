@@ -145,7 +145,7 @@ currentCan.addEventListener('click', function(evt) {
     // First check if the click is inside an exsisting box
     for (var i = 0; i < items.length; i++) {
 
-      if (items[i].isClicked(mousePos) && selectedTypeLayer !== "bottom" && items[i].layer === "top") {
+      if (items[i].isClicked(mousePos) && selectedTypeLayer !== "top") {
         console.log(items[i]);
         console.log("HIT!");
         // Set global CS (currentSelection) = to the clicked Box
