@@ -1,0 +1,418 @@
+@font-face {
+    font-family: "Market_Deco";
+    src: url(../css/fonts/Market_Deco.ttf);
+}
+
+html body {
+  background: url(../images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    margin: 0;
+}
+
+/*slider*/
+.cb-slideshow,
+.cb-slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    background-color: #000;
+}
+.cb-slideshow:after {
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left;
+}
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url(../images/1.jpg)
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(../images/2.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(../images/3.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(../images/4.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(../images/5.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+    background-image: url(../images/6.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation {
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation {
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation {
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation {
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation {
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+/*slider*/
+
+/*front page*/
+
+.container {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 96%;
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  float: left;
+  position: relative;
+}
+
+.header img {
+  width: 28%;
+  height: auto;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0; bottom: 0;
+  margin-left: -47%;
+}
+
+.navigation {
+  width: 50%;
+  height: 50%;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0; bottom: 0;
+  margin-left: 47%;
+}
+
+nav{
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+li {
+    float: left;
+    border-right: solid 1px #fff;
+}
+
+a {
+    font-family: Market_Deco;
+    font-size: 20px;
+    display: block;
+    color: #fff;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #f09c2d;
+}
+
+nav li:last-child {
+    border: none;
+}
+
+.slogan {
+  width: 100%;
+  height: 80%;
+  float: left;
+  position: relative;
+}
+.sloan_box {
+  width: 97%;
+  height: auto;
+  float: right;
+  position: absolute;
+  bottom: 0;
+}
+
+.sloan_box h1 {
+  color: #fff;
+  font-family: "Market_Deco";
+  font-size: 100px;
+  text-align: right;
+  margin: 0;
+}
+
+/*front page*/
+
+/*rest of the page*/
+
+.b_header {
+  width: 100%;
+  height: 10%;
+  background-color: #fcfcfc;
+  border-bottom: 2px solid #fff;
+}
+
+.b_logo {
+  height: 100%;
+  width: 30%;
+  float: left;
+  position: relative;
+}
+
+.b_logo img {
+  height: 80%;
+  width: auto;
+  float: left;
+  margin: auto;
+  position: absolute;
+  top: 0; bottom: 0;
+  margin-left: -47%;
+}
+
+.b_navigation {
+  width: 70%;
+  height: 100%;
+  float: left;
+  position: relative;
+
+}
+
+.b_navigation nav{
+    width: 50%;
+    height: 50%;
+    float: right;
+    display: block;
+    margin-left: 49%;
+    position: absolute;
+    bottom: 0;
+}
+
+.b_navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.b_navigation li {
+    float: left;
+    border-right: solid 1px #666766;
+}
+
+.b_navigation a {
+    font-family: Market_Deco;
+    font-size: 20px;
+    display: block;
+    color: #666766;
+    padding: 0 10px 0 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.b_navigation nav li a:hover {
+    color: #f09c2d;
+}
+
+.b_navigation nav li:last-child {
+    border: none;
+}
+
+.layout {
+  width: 80%;
+  height: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.left {
+  width: 50%;
+  height: 50%;
+  display: block;
+  float: left;
+}
+
+.text {
+  width: 90%;
+  height: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.text h2 {
+  font-family: Market_Deco;
+  color: #666766;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+.text p {
+  font-family: Market_Deco;
+  line-height: 2;
+  color: #666766;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  display: block;
+  float: left;
+}
+
+.image {
+  width: 90%;
+  height: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%;
+  overflow: hidden;
+}
+
+.image img {
+  width: auto;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*rest of the page*/
