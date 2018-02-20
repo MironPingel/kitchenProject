@@ -18,16 +18,48 @@ let totalPrice = 0;
 let priceText = document.getElementById('totalPrice');
 let lastMousePos = null;
 
+
+// CONTROLLS
 let clearBtn = document.getElementById('clear');
+let gridBtn = document.getElementById('grid');
 
 
-function getMousePos(canvas, evt) {
-  var rect = canvas.getBoundingClientRect();
-  return {
-    x: evt.clientX - rect.left,
-    y: evt.clientY - rect.top
-  };
+
+// GRID
+let gridTurnedOn = true;
+gridBtn.addEventListener("click", function(e) {
+  gridTurnedOn = !gridTurnedOn;
+
+  if (gridTurnedOn) {
+    gridBtn.innerHTML = "TURN SNAP GRID <b>OFF</b>";
+    drawGrid();
+  } else {
+    gridBtn.innerHTML = "TURN SNAP GRID <b>ON</b>";
+  }
+});
+
+let ratio = can1.width/can1.height;
+let stepx = can1.width/60;
+let stepy = (can1.height/60) * ratio;
+
+if (can1.height > can1.width) {
+  ratio = can1.height/can1.width;
+  stepx = (can1.width/60) * ratio;
+  stepy = can1.height/60;
 }
+
+let xGrid = [];
+let yGrid = [];
+for (var i = 0; i < can1.width; i = i+stepx) {
+  xGrid.push(i);
+}
+
+for (var i = 0; i < can1.height; i = i+stepy) {
+  yGrid.push(i);
+}
+drawGrid();
+
+
 
 
 // Check if clear button is isClicked
@@ -185,12 +217,35 @@ currentCan.addEventListener('dblclick', function(evt) {
 // -----------------------------------
 
 
+
+// MOUSE POSITION
+
+function getMousePos(canvas, evt) {
+  var rect = canvas.getBoundingClientRect();
+  return {
+    x: evt.clientX - rect.left,
+    y: evt.clientY - rect.top
+  };
+}
+
+
+
+
 // Place new box (add BoxType in the future)
 function placeBox (mousePos) {
   //let randomRGB = "rgb(" + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + ")";
   if (selectedType) {
     let sel = itemTypes[selectedType];
-    let box = new Box(mousePos.x, mousePos.y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
+
+    let x = mousePos.x;
+    let y = mousePos.y;
+
+    if (gridTurnedOn) {
+      x = getClosest(mousePos.x, xGrid);
+      y = getClosest(mousePos.y, yGrid);
+    }
+
+    let box = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
     box = checkBoundries(box);
 
     if (checkCollision(box)) {
@@ -231,6 +286,35 @@ function checkBoundries (item) {
   return item;
 }
 
+
+// Find closes Grid line
+// ARGUMENTS: test = coordiante, x or y   |   arr = grid array (x or y)
+function getClosest(test, arr) {
+  var num = result = 0;
+  var flag = 0;
+  for(var i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if(num < test) {
+      result = num;
+      flag = 1;
+    }else if (num == test) {
+      result = num;
+      break;
+    }else if (flag == 1) {
+      if ((num - test) < (Math.abs(arr[i-1] - test))){
+        result = num;
+      }
+      break;
+    }else{
+      break;
+    }
+  }
+  return result;
+}
+
+
+
+// Check for collision/overlap
 
 function checkCollision (item) {
 
@@ -283,6 +367,39 @@ function rotateItem (item) {
   return item;
 }
 
+
+
+// Draw grid
+
+function drawGrid() {
+  for (var i = 0; i < xGrid.length; i++) {
+    canContext.beginPath();
+    canContext.moveTo(xGrid[i],0);
+    canContext.lineTo(xGrid[i],can1.height);
+    canContext.stroke();
+    canContext.strokeStyle = "lightgrey";
+
+    can2Context.beginPath();
+    can2Context.moveTo(xGrid[i],0);
+    can2Context.lineTo(xGrid[i],can1.height);
+    can2Context.stroke();
+    can2Context.strokeStyle = "lightgrey";
+  }
+
+  for (var i = 0; i < yGrid.length; i++) {
+    canContext.beginPath();
+    canContext.moveTo(0,yGrid[i]);
+    canContext.lineTo(can1.width, yGrid[i]);
+    canContext.stroke();
+    canContext.strokeStyle = "lightgrey";
+
+    can2Context.beginPath();
+    can2Context.moveTo(0,yGrid[i]);
+    can2Context.lineTo(can1.width, yGrid[i]);
+    can2Context.stroke();
+    can2Context.strokeStyle = "lightgrey";
+  }
+}
 
 
 

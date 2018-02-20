@@ -1,39 +1,3 @@
-html	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <html class="no-js" lang="en">$/;"	function	line:2
-head	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <head>$/;"	function	line:3
-meta	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <meta charset='utf-8'\/>$/;"	function	line:4
-title	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <title>KKML Kitchens<\/title>$/;"	function	line:5
-link	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <link rel="icon" href="images\/favicon.png">$/;"	function	line:6
-link	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <link rel="stylesheet" type="text\/css" href="css\/main.css" \/>$/;"	function	line:7
-body	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <body id="page">$/;"	function	line:10
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <div class="container">$/;"	function	line:12
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <div class="b_header">$/;"	function	line:13
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div class="b_logo">$/;"	function	line:14
-a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <a href="index.html"><img src="images\/b_logo.png"\/><\/a>$/;"	function	line:15
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div class="b_navigation">$/;"	function	line:17
-nav	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <nav>$/;"	function	line:18
-ul	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                <ul>$/;"	function	line:19
-li	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                    <li>$/;"	function	line:20
-a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                        <a href="builder.html">kitchen builder<\/a>$/;"	function	line:21
-li	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                    <li>$/;"	function	line:23
-a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                        <a href="about_us.html">About us<\/a>$/;"	function	line:24
-li	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                    <li>$/;"	function	line:26
-a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                        <a href="contacts.html">Contacts<\/a>$/;"	function	line:27
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <div id="canvases">$/;"	function	line:35
-canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <canvas class="can" id="canL1" width="950" height="600"><\/canvas>$/;"	function	line:36
-canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <canvas class="can" id="canL2" width="950" height="600"><\/canvas>$/;"	function	line:37
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <div id="right">$/;"	function	line:38
-canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <canvas id="libCan" width="400" height="400"><\/canvas>$/;"	function	line:39
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div id="priceContainer" class="unselectable">$/;"	function	line:41
-button	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <button type="button" id="clear">CLEAR<\/button>$/;"	function	line:42
-h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h3>Total Price<\/h3>$/;"	function	line:43
-h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h6 id="totalPrice">0<\/h6>$/;"	function	line:44
-a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <a id="download">Download as image<\/a>$/;"	function	line:46
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <script>$/;"	function	line:52
-downloadCanvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      function downloadCanvas(link, canvasId, filename) {$/;"	function	line:54
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/itemTypes.js" charset="utf-8"><\/script>$/;"	function	line:63
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/main.js" charset="utf-8"><\/script>$/;"	function	line:64
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/lib.js" charset="utf-8"><\/script>$/;"	function	line:65
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/shape_drawer.js"><\/script>$/;"	function	line:66
 @font-face	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^@font-face {$/;"	function	line:1
 html body	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^html body {$/;"	function	line:6
 .cb-slideshow	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.cb-slideshow,$/;"	function	line:16
@@ -132,19 +96,60 @@ canvas	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^canvas {$/;
 #canL1	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#canL1 {$/;"	function	line:482
 #canL2	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#canL2 {$/;"	function	line:487
 #download	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#download{$/;"	function	line:494
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:24
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:24
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:56
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:56
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:189
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:189
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:219
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:219
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:235
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:235
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:262
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:262
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:278
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:278
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:291
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:291
+html	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <html class="no-js" lang="en">$/;"	function	line:2
+head	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <head>$/;"	function	line:3
+meta	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <meta charset='utf-8'\/>$/;"	function	line:4
+title	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <title>KKML Kitchens<\/title>$/;"	function	line:5
+link	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <link rel="icon" href="images\/favicon.png">$/;"	function	line:6
+link	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <link rel="stylesheet" type="text\/css" href="css\/main.css" \/>$/;"	function	line:7
+body	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <body id="page">$/;"	function	line:10
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <div class="container">$/;"	function	line:12
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <div class="b_header">$/;"	function	line:13
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div class="b_logo">$/;"	function	line:14
+a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <a href="index.html"><img src="images\/b_logo.png"\/><\/a>$/;"	function	line:15
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div class="b_navigation">$/;"	function	line:17
+nav	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <nav>$/;"	function	line:18
+ul	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                <ul>$/;"	function	line:19
+li	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                    <li>$/;"	function	line:20
+a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                        <a href="builder.html">kitchen builder<\/a>$/;"	function	line:21
+li	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                    <li>$/;"	function	line:23
+a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                        <a href="about_us.html">About us<\/a>$/;"	function	line:24
+li	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                    <li>$/;"	function	line:26
+a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^                        <a href="contacts.html">Contacts<\/a>$/;"	function	line:27
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <div id="canvases">$/;"	function	line:35
+canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <canvas class="can" id="canL1" width="950" height="600"><\/canvas>$/;"	function	line:36
+canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <canvas class="can" id="canL2" width="950" height="600"><\/canvas>$/;"	function	line:37
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <div id="right">$/;"	function	line:38
+canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <canvas id="libCan" width="400" height="400"><\/canvas>$/;"	function	line:39
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div id="priceContainer" class="unselectable">$/;"	function	line:41
+button	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <button type="button" id="clear">CLEAR<\/button>$/;"	function	line:42
+button	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <button type="button" id="grid">TURN SNAP GRID <b>OFF<\/b><\/button>$/;"	function	line:43
+h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h3>Total Price<\/h3>$/;"	function	line:44
+h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h6 id="totalPrice">0<\/h6>$/;"	function	line:45
+a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <a id="download">Download as image<\/a>$/;"	function	line:47
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <script>$/;"	function	line:53
+downloadCanvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      function downloadCanvas(link, canvasId, filename) {$/;"	function	line:55
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/itemTypes.js" charset="utf-8"><\/script>$/;"	function	line:64
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/main.js" charset="utf-8"><\/script>$/;"	function	line:65
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/lib.js" charset="utf-8"><\/script>$/;"	function	line:66
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/shape_drawer.js"><\/script>$/;"	function	line:67
+update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:88
+update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:88
+getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:223
+getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:223
+placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:235
+placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:235
+checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:274
+checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:274
+getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getClosest(test, arr) {$/;"	function	line:292
+getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getClosest(test, arr) {$/;"	function	line:292
+checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:319
+checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:319
+updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:346
+updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:346
+rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:362
+rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:362
+drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:374
+drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:374
+Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:408
+Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:408
