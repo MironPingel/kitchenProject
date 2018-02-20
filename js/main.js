@@ -10,6 +10,7 @@ let itemOnMove = false;
 let selectedType = null;
 let totalPrice = 0;
 let priceText = document.getElementById('totalPrice');
+let lastMousePos = null;
 
 
 function getMousePos(canvas, evt) {
@@ -38,6 +39,12 @@ lib.addEventListener('mousemove', function(evt) {
 
 // Runs on every mouseMovement
 function update(mousePos, canvas) {
+  if (mousePos === null) {
+    mousePos = lastMousePos;
+  } else {
+    lastMousePos = mousePos;
+  }
+
   let context = canvas.getContext("2d");
   // Clear before drawing again
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -63,6 +70,26 @@ function update(mousePos, canvas) {
     }
   }
 }
+
+
+
+
+
+// Listen for r press (to rotate)
+document.addEventListener("keypress", function(event) {
+
+    if (event.keyCode == 114) {
+      if (cs) {
+        rotateItem(cs);
+        update(mousePos = null, can)
+      } else if (selectedType !== null){
+        console.log("Rotate Template");
+        rotateItem(itemTypes[selectedType]);
+        update(mousePos = null, can)
+      }
+    }
+});
+
 
 
 
@@ -201,6 +228,23 @@ function updatePrice() {
 
   priceText.innerHTML = price;
 }
+
+
+
+
+
+// Rotate Function - Switches height and width values
+
+function rotateItem (item) {
+  let prevWidth = item.width;
+  let prevHeight = item.height;
+  item.width = prevHeight;
+  item.height = prevWidth;
+  return item;
+}
+
+
+
 
 
 // BoxObject

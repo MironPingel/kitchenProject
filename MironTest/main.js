@@ -70,6 +70,9 @@ function update(mousePos, canvas) {
 
 
 
+
+
+
 // Create object onClick
 // -----------------------------
 
@@ -201,6 +204,8 @@ function updatePrice() {
 
   priceText.innerHTML = price;
 }
+
+
 
 
 // BoxObject
