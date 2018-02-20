@@ -10,6 +10,7 @@ itemTypes["floor60"] = {
     "color": 'BurlyWood',
     "title": "Floor 60",
     "price": 1899,
+    "layer": "bottom",
   };
 
 itemTypes["floor40"] = {
@@ -20,6 +21,7 @@ itemTypes["floor40"] = {
     "color": 'BurlyWood',
     "title": "Floor 40",
     "price": 1299,
+    "layer": "bottom",
   };
 
 itemTypes["wall30"] = {
@@ -30,6 +32,7 @@ itemTypes["wall30"] = {
     "color": 'Peru',
     "title": "Wall 30",
     "price": 1499,
+    "layer": "top",
 };
 
 itemTypes["wall60"] = {
@@ -40,4 +43,5 @@ itemTypes["wall60"] = {
     "color": 'Peru',
     "title": "Wall 60",
     "price": 2199,
+    "layer": "top",
 };

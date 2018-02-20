@@ -1,5 +1,11 @@
-let can = document.getElementById('can');
-let canContext = can.getContext('2d');
+let can1 = document.getElementById('canL1');
+// let canContext = can1.getContext('2d');
+
+let can2 = document.getElementById('canL2');
+// let can2Context = can2.getContext('2d');
+
+let currentCan = can1;
+let currentContext = currentCan.getContext('2d');
 
 let lib = document.getElementById('libCan');
 let libContext = lib.getContext('2d');
@@ -25,9 +31,9 @@ function getMousePos(canvas, evt) {
 
 
 // Update Canvas on MouseMove
-can.addEventListener('mousemove', function(evt) {
-  var mousePos = getMousePos(can, evt);
-  update(mousePos, can);
+currentCan.addEventListener('mousemove', function(evt) {
+  var mousePos = getMousePos(currentCan, evt);
+  update(mousePos, currentCan);
 }, false);
 
 // Canvas 2 - Library
@@ -59,7 +65,7 @@ function update(mousePos, canvas) {
     let sel = itemTypes[selectedType];
     let x = mousePos.x;
     let y = mousePos.y;
-    let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price);
+    let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
     placeholder.draw(context)
   }
 
@@ -81,11 +87,11 @@ document.addEventListener("keypress", function(event) {
     if (event.keyCode == 114) {
       if (cs) {
         rotateItem(cs);
-        update(mousePos = null, can)
+        update(mousePos = null, currentCan)
       } else if (selectedType !== null){
         console.log("Rotate Template");
         rotateItem(itemTypes[selectedType]);
-        update(mousePos = null, can)
+        update(mousePos = null, currentCan)
       }
     }
 });
@@ -100,8 +106,8 @@ document.addEventListener("keypress", function(event) {
 // Create object onClick
 // -----------------------------
 
-can.addEventListener('click', function(evt) {
-  let mousePos = getMousePos(can, evt);
+currentCan.addEventListener('click', function(evt) {
+  let mousePos = getMousePos(currentCan, evt);
 
   // If item is "picked up" then do this onClick
   if (itemOnMove) {
@@ -110,7 +116,7 @@ can.addEventListener('click', function(evt) {
     // Add the item that is "picked up" to the items array again
 
     items.push(checkBoundries(cs));
-    cs = new Box(0,0,selectedType.width, selectedType.height, selectedType.color);
+    cs = new Box(0,0,selectedType.width, selectedType.height, selectedType.color, selectedType.type, selectedType.price, selectedType.layer);
     itemOnMove = false;
 
   } else {  // If no item is currently "picked up"
@@ -138,8 +144,8 @@ can.addEventListener('click', function(evt) {
 
 
 
-can.addEventListener('dblclick', function(evt) {
-  let mousePos = getMousePos(can, evt);
+currentCan.addEventListener('dblclick', function(evt) {
+  let mousePos = getMousePos(currentCan, evt);
   for (var i = 0; i < items.length; i++) {
     if (items[i].isClicked(mousePos)) {
       items.splice(i, 1);
@@ -160,14 +166,14 @@ can.addEventListener('dblclick', function(evt) {
 function placeBox (mousePos) {
   //let randomRGB = "rgb(" + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + ")";
   let sel = itemTypes[selectedType];
-  let box = new Box(mousePos.x, mousePos.y, sel.width, sel.height, sel.color, sel.type, sel.price);
+  let box = new Box(mousePos.x, mousePos.y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
   box = checkBoundries(box);
 
   if (checkCollision(box)) {
     alert("You cant place Items ontop of each other.");
   } else {
     items.push(box);
-    box.draw(canContext);
+    box.draw(currentContext);
     updatePrice();
   }
 }
@@ -177,14 +183,14 @@ function placeBox (mousePos) {
 // Check if item is inside the confains of the canvas, otherwise move it to the edge
 
 function checkBoundries (item) {
-  if (item.x + item.width > can.width) {
-    item.x = can.width - item.width;
+  if (item.x + item.width > currentCan.width) {
+    item.x = currentCan.width - item.width;
   } else if (item.x < 0) {
     item.x = 0;
   }
 
-  if (item.y + item.width > can.height) {
-    item.y = can.height - item.height;
+  if (item.y + item.width > currentCan.height) {
+    item.y = currentCan.height - item.height;
   } else if (item.y < 0) {
     item.y = 0;
   }
@@ -248,7 +254,7 @@ function rotateItem (item) {
 
 
 // BoxObject
-function Box (x, y, width, height, color, type, price) {
+function Box (x, y, width, height, color, type, price, layer) {
   this.width = width;
   this.height = height;
   this.x = x - width/2;
@@ -256,6 +262,7 @@ function Box (x, y, width, height, color, type, price) {
   this.color = color;
   this.type = type;
   this.price = price;
+  this.layer = layer;
 
   this.draw = (context) => {
     context.beginPath();

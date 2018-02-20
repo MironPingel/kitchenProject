@@ -459,6 +459,8 @@ canvas {
 #libCan {
   margin-left: 20px;
   border: none;
+  position: absolute;
+  right: 0px;
 }
 
 #priceContainer {
@@ -470,4 +472,16 @@ canvas {
 #priceContainer h6::after {
   content: "DKR";
   margin-left: 5px;
+}
+
+
+
+#canL1 {
+  position: absolute;
+  z-index: 100;
+}
+
+#canL2 {
+  position: absolute;
+  z-index: 0;
 }
