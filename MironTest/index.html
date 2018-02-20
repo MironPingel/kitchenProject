@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+
+      .unselectable {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      body {
+        display: flex;
+        margin: 0px;
+        padding: 20px;
+      }
+
+      canvas {
+        border: 10px solid lightgrey;
+      }
+
+      #lib {
+        flex-grow: 1;
+        padding: 1.5%;
+      }
+
+      #libCan {
+        margin-left: 20px;
+        border: none;
+      }
+
+      #priceContainer {
+        text-align: center;
+        color: grey;
+        padding-top: 20px;
+      }
+
+      #priceContainer h6::after {
+        content: "DKR";
+        margin-left: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <canvas id="can" width="950" height="600"></canvas>
+    <div id="right">
+      <canvas id="libCan" width="400" height="400"></canvas>
+      <div id="priceContainer" class="unselectable">
+        <h3>Total Price</h3>
+        <h6 id="totalPrice">0</h6>
+      </div>
+    </div>
+
+
+
+
+    <script src="itemTypes.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <script src="lib.js" charset="utf-8"></script>
+  </body>
+</html>
