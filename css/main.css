@@ -145,6 +145,13 @@ html body {
 
 /*front page*/
 
+.f_container {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 97%;
+}
+
 .container {
   position: relative;
   float: left;
@@ -313,7 +320,7 @@ nav li:last-child {
 
 .layout {
   width: 80%;
-  height: 90%;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
@@ -358,7 +365,7 @@ nav li:last-child {
 
 .right {
   width: 50%;
-  height: 100%;
+  height: 700px;
   display: block;
   float: left;
 }
