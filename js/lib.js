@@ -23,6 +23,7 @@ lib.addEventListener('click', function(evt) {
   for (var i = 0; i < drawnItems.length; i++) {
     if (drawnItems[i].isClicked(mousePos)) {
       selectedType = drawnItems[i].type;
+      console.log(selectedType);
     }
   }
 })

@@ -33,11 +33,8 @@ function getMousePos(canvas, evt) {
 // Update Canvas on MouseMove
 currentCan.addEventListener('mousemove', function(evt) {
   var mousePos = getMousePos(currentCan, evt);
-  // console.log(`
-  //   ${mousePos.x}
-  //
-  // `);
-  update(mousePos, currentCan);
+  update(mousePos, can1);
+  update(mousePos, can2);
 }, false);
 
 // Canvas 2 - Library
@@ -76,7 +73,6 @@ function update(mousePos, canvas) {
   // Draw all items in items array
   for (let box of items) {
     if (box) {
-
       // Decide which layer to draw them on
       if (box.layer === "top") {
         box.draw(canContext);
@@ -127,7 +123,8 @@ currentCan.addEventListener('click', function(evt) {
     // Add the item that is "picked up" to the items array again
 
     items.push(checkBoundries(cs));
-    cs = new Box(0,0,selectedType.width, selectedType.height, selectedType.color, selectedType.type, selectedType.price, selectedType.layer);
+    cs = null;
+    //cs = new Box(0,0,selectedType.width, selectedType.height, selectedType.color, selectedType.type, selectedType.price, selectedType.layer);
     itemOnMove = false;
 
   } else {  // If no item is currently "picked up"
@@ -135,16 +132,10 @@ currentCan.addEventListener('click', function(evt) {
     // First check if the click is inside an exsisting box
     for (var i = 0; i < items.length; i++) {
       if (items[i].isClicked(mousePos)) {
+        console.log(items[i]);
         console.log("HIT!");
         // Set global CS (currentSelection) = to the clicked Box
         cs = items[i];
-
-        if (items[i].layer === "top") {
-          currentCan = can2;
-        } else if (items[i].layer === "bottom"){
-          currentCan = can1;
-        }
-
         // Remove the selected box from items array
         items.splice(i, 1);
         // Set state to itemOnMove
@@ -183,16 +174,18 @@ currentCan.addEventListener('dblclick', function(evt) {
 // Place new box (add BoxType in the future)
 function placeBox (mousePos) {
   //let randomRGB = "rgb(" + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + "," + Math.floor((Math.random() * 255)) + ")";
-  let sel = itemTypes[selectedType];
-  let box = new Box(mousePos.x, mousePos.y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
-  box = checkBoundries(box);
+  if (selectedType) {
+    let sel = itemTypes[selectedType];
+    let box = new Box(mousePos.x, mousePos.y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
+    box = checkBoundries(box);
 
-  if (checkCollision(box)) {
-    alert("You cant place Items ontop of each other.");
-  } else {
-    items.push(box);
-    box.draw(currentContext);
-    updatePrice();
+    if (checkCollision(box)) {
+      alert("You cant place Items ontop of each other.");
+    } else {
+      items.push(box);
+      box.draw(currentContext);
+      updatePrice();
+    }
   }
 }
 
