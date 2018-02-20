@@ -23,6 +23,8 @@ function getMousePos(canvas, evt) {
 
 
 
+
+
 // Update Canvas on MouseMove
 can.addEventListener('mousemove', function(evt) {
   var mousePos = getMousePos(can, evt);

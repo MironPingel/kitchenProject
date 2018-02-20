@@ -464,3 +464,11 @@ canvas {
   content: "DKR";
   margin-left: 5px;
 }
+/* download canvas */
+#download{
+  color:grey;
+  border: 1px solid grey;
+  position: relative;
+  left:25%;
+  width:50%;
+}
