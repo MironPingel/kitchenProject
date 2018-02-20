@@ -18,6 +18,8 @@ let totalPrice = 0;
 let priceText = document.getElementById('totalPrice');
 let lastMousePos = null;
 
+let clearBtn = document.getElementById('clear');
+
 
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
@@ -27,6 +29,12 @@ function getMousePos(canvas, evt) {
   };
 }
 
+
+// Check if clear button is isClicked
+
+clearBtn.addEventListener("click", function(e) {
+  selectedType = null;
+});
 
 
 
@@ -129,9 +137,15 @@ currentCan.addEventListener('click', function(evt) {
 
   } else {  // If no item is currently "picked up"
 
+    let selectedTypeLayer = '';
+
+    if (selectedType !== null) {
+      selectedTypeLayer = itemTypes[selectedType].layer;
+    }
     // First check if the click is inside an exsisting box
     for (var i = 0; i < items.length; i++) {
-      if (items[i].isClicked(mousePos)) {
+
+      if (items[i].isClicked(mousePos) && selectedTypeLayer !== "bottom" && items[i].layer === "top") {
         console.log(items[i]);
         console.log("HIT!");
         // Set global CS (currentSelection) = to the clicked Box
@@ -180,7 +194,16 @@ function placeBox (mousePos) {
     box = checkBoundries(box);
 
     if (checkCollision(box)) {
-      alert("You cant place Items ontop of each other.");
+
+      // Check if item is wall item on floor item
+      if (sel.layer === "top") {
+        items.push(box);
+        box.draw(currentContext);
+        updatePrice();
+      } else { // if not - then it cant be placed
+        alert("You cant place Items ontop of each other.");
+      }
+
     } else {
       items.push(box);
       box.draw(currentContext);

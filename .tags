@@ -121,29 +121,30 @@ canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <ca
 canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <canvas class="can" id="canL2" width="950" height="600"><\/canvas>$/;"	function	line:37
 div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <div id="right">$/;"	function	line:38
 canvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <canvas id="libCan" width="400" height="400"><\/canvas>$/;"	function	line:39
-div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div id="priceContainer" class="unselectable">$/;"	function	line:40
-h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h3>Total Price<\/h3>$/;"	function	line:41
-h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h6 id="totalPrice">0<\/h6>$/;"	function	line:42
-a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <a id="download">Download as image<\/a>$/;"	function	line:44
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <script>$/;"	function	line:50
-downloadCanvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      function downloadCanvas(link, canvasId, filename) {$/;"	function	line:52
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/itemTypes.js" charset="utf-8"><\/script>$/;"	function	line:61
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/main.js" charset="utf-8"><\/script>$/;"	function	line:62
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/lib.js" charset="utf-8"><\/script>$/;"	function	line:63
-script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/shape_drawer.js"><\/script>$/;"	function	line:64
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:22
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:22
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:48
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:48
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:175
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:175
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:196
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:196
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:212
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:212
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:239
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:239
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:255
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:255
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:268
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:268
+div	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <div id="priceContainer" class="unselectable">$/;"	function	line:41
+button	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <button type="button" id="clear">CLEAR<\/button>$/;"	function	line:42
+h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h3>Total Price<\/h3>$/;"	function	line:43
+h	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^            <h6 id="totalPrice">0<\/h6>$/;"	function	line:44
+a	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^          <a id="download">Download as image<\/a>$/;"	function	line:46
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      <script>$/;"	function	line:52
+downloadCanvas	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^      function downloadCanvas(link, canvasId, filename) {$/;"	function	line:54
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/itemTypes.js" charset="utf-8"><\/script>$/;"	function	line:63
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/main.js" charset="utf-8"><\/script>$/;"	function	line:64
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/lib.js" charset="utf-8"><\/script>$/;"	function	line:65
+script	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^        <script src="js\/shape_drawer.js"><\/script>$/;"	function	line:66
+getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:24
+getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:24
+update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:56
+update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:56
+placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:189
+placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:189
+checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:219
+checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:219
+checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:235
+checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:235
+updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:262
+updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:262
+rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:278
+rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:278
+Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:291
+Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:291
