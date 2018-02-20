@@ -5,6 +5,7 @@
     <title>KKML Kitchens</title>
     <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+
     </head>
     <body id="page">
 
@@ -40,9 +41,22 @@
             <h3>Total Price</h3>
             <h6 id="totalPrice">0</h6>
           </div>
+          <a id="download">Download as image</a>
+
+
         </div>
       </div>
 
+      <script>
+      // download canvas
+      function downloadCanvas(link, canvasId, filename) {
+          link.href = document.getElementById(canvasId).toDataURL();
+          link.download = filename;
+      }
+      document.getElementById('download').addEventListener('click', function() {
+          downloadCanvas(this, 'can', 'MyNewKitchen.jpg');
+      }, false);
+      </script>
         <script src="js/itemTypes.js" charset="utf-8"></script>
         <script src="js/main.js" charset="utf-8"></script>
         <script src="js/lib.js" charset="utf-8"></script>

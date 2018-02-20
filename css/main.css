@@ -474,8 +474,6 @@ canvas {
   margin-left: 5px;
 }
 
-
-
 #canL1 {
   position: absolute;
   z-index: 100;
@@ -484,4 +482,12 @@ canvas {
 #canL2 {
   position: absolute;
   z-index: 0;
+
+/* download canvas */
+#download{
+  color:grey;
+  border: 1px solid grey;
+  position: relative;
+  left:25%;
+  width:50%;
 }
