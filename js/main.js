@@ -1,11 +1,20 @@
+let container = document.getElementById('canvases');
+console.log(container.style.width);
+
 let can1 = document.getElementById('canL1');
 let canContext = can1.getContext('2d');
+can1.width = container.offsetWidth;
 
 let can2 = document.getElementById('canL2');
 let can2Context = can2.getContext('2d');
+can2.width = container.offsetWidth;
 
 let bgCan = document.getElementById('bg');
 let bgContext = bgCan.getContext('2d');
+bgCan.width = container.offsetWidth;
+
+let printCan = document.getElementById('canL4');
+printCan.width = container.offsetWidth;
 
 let currentCan = can1;
 let currentContext = currentCan.getContext('2d');
@@ -60,15 +69,15 @@ gridBtn.addEventListener("click", function(e) {
 });
 
 
-
+let gridRes = 140;
 let ratio = can1.width/can1.height;
-let stepx = can1.width/60;
-let stepy = (can1.height/60) * ratio;
+let stepx = can1.width/gridRes;
+let stepy = (can1.height/gridRes) * ratio;
 
 if (can1.height > can1.width) {
   ratio = can1.height/can1.width;
-  stepx = (can1.width/60) * ratio;
-  stepy = can1.height/60;
+  stepx = (can1.width/gridRes) * ratio;
+  stepy = can1.height/gridRes;
 }
 
 
@@ -467,7 +476,7 @@ function getClosest(test, arr) {
 // Check for collision/overlap with Items in Item array
 
 function checkCollision (item) {
-
+  let tolerance = 3;
   let iX = item.x;
   let iY = item.y;
   let iW = item.width;
@@ -475,10 +484,10 @@ function checkCollision (item) {
 
   for (var i = 0; i < items.length; i++) {
     let it = items[i];
-    let x = it.x;
-    let y = it.y;
-    let w = it.width;
-    let h = it.height;
+    let x = it.x-tolerance;
+    let y = it.y-tolerance;
+    let w = it.width-tolerance;
+    let h = it.height-tolerance;
 
     if (iX < x + w &&
        iX + iW > x &&

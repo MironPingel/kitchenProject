@@ -1,44 +1,177 @@
-<<<<<<< HEAD
-=======
->>>>>>> betterControls
-<<<<<<< HEAD
-=======
->>>>>>> betterControls
-<<<<<<< HEAD
-=======
->>>>>>> betterControls
-itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["floor60"] = {$/;"	property	line:5
-itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 40,$/;"	property	line:6
-itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 85,$/;"	property	line:7
-itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 60,$/;"	property	line:8
-itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 60,$/;"	property	line:9
-itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'BurlyWood',$/;"	property	line:10
-itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Floor 60",$/;"	property	line:11
-itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 1899,$/;"	property	line:12
-itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["floor40"] = {$/;"	property	line:16
-itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 220,$/;"	property	line:17
-itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 85,$/;"	property	line:18
-itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 40,$/;"	property	line:19
-itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 60,$/;"	property	line:20
-itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'BurlyWood',$/;"	property	line:21
-itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Floor 40",$/;"	property	line:22
-itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 1299,$/;"	property	line:23
-itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["wall30"] = {$/;"	property	line:27
-itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 30,$/;"	property	line:28
-itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 230,$/;"	property	line:29
-itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 30,$/;"	property	line:30
-itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 30,$/;"	property	line:31
-itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'Peru',$/;"	property	line:32
-itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Wall 30",$/;"	property	line:33
-itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 1499,$/;"	property	line:34
-itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["wall60"] = {$/;"	property	line:38
-itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 220,$/;"	property	line:39
-itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 230,$/;"	property	line:40
-itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 60,$/;"	property	line:41
-itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 30,$/;"	property	line:42
-itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'Peru',$/;"	property	line:43
-itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Wall 60",$/;"	property	line:44
-itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 2199,$/;"	property	line:45
+setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^setTimeout(function(){$/;"	function	line:55
+update	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function update(mousePos, canvas) {$/;"	function	line:160
+drawingFloor.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^      drawingFloor = {$/;"	property	line:184
+update	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function update(mousePos, canvas) {$/;"	function	line:160
+getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function getMousePos(canvas, evt) {$/;"	function	line:376
+getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function getMousePos(canvas, evt) {$/;"	function	line:376
+diff	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function diff(a,b) {$/;"	function	line:386
+diff	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function diff(a,b) {$/;"	function	line:386
+placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function placeBox (mousePos) {$/;"	function	line:393
+placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function placeBox (mousePos) {$/;"	function	line:393
+checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function checkBoundries (item) {$/;"	function	line:432
+checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function checkBoundries (item) {$/;"	function	line:432
+getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function getClosest(test, arr) {$/;"	function	line:450
+getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function getClosest(test, arr) {$/;"	function	line:450
+checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function checkCollision (item) {$/;"	function	line:478
+checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function checkCollision (item) {$/;"	function	line:478
+isInsideFloor	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function isInsideFloor (item) {$/;"	function	line:507
+isInsideFloor	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function isInsideFloor (item) {$/;"	function	line:507
+updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function updatePrice() {$/;"	function	line:540
+updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function updatePrice() {$/;"	function	line:540
+rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function rotateItem (item) {$/;"	function	line:557
+rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function rotateItem (item) {$/;"	function	line:557
+drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function drawGrid() {$/;"	function	line:569
+drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function drawGrid() {$/;"	function	line:569
+Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:603
+Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:603
+sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^  Math.sign = function(x) {$/;"	function	line:635
+Math.sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^if (!Math.sign) {$/;"	function	line:634
+makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function makeImg(){$/;"	function	line:653
+makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function makeImg(){$/;"	function	line:653
+flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:675
+setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^    setTimeout(function(){$/;"	function	line:698
+flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:675
+closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function closeCurrentFlashMessage() {$/;"	function	line:704
+closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function closeCurrentFlashMessage() {$/;"	function	line:704
+updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function updateEditButton() {$/;"	function	line:712
+updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function updateEditButton() {$/;"	function	line:712
+saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:729
+saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:729
+loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function loadFileContent() {$/;"	function	line:741
+onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^   oFReader.onload = function (oFREvent) {$/;"	function	line:744
+loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^    loadJSON(oFREvent.target.result, function(fileContent) {$/;"	function	line:746
+oFReader.onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^   oFReader.readAsDataURL(document.getElementById("uploadText").files[0]);$/;"	function	line:743
+loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function loadFileContent() {$/;"	function	line:741
+loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function loadJSON(url, callback) {$/;"	function	line:766
+onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^    xobj.onreadystatechange = function() {$/;"	function	line:770
+xobj.onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^    xobj.open('GET', url, true);$/;"	function	line:769
+loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/m.js	/^function loadJSON(url, callback) {$/;"	function	line:766
+@font-face	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@font-face {$/;"	function	line:1
+html body	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^html body {$/;"	function	line:6
+.cb-slideshow	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow,$/;"	function	line:16
+.cb-slideshow:after	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow:after {$/;"	function	line:17
+.cb-slideshow:after	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow:after {$/;"	function	line:26
+.cb-slideshow li span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li span {$/;"	function	line:30
+.cb-slideshow li:nth-child(1) span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li:nth-child(1) span {$/;"	function	line:50
+.cb-slideshow li:nth-child(2) span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li:nth-child(2) span {$/;"	function	line:53
+.cb-slideshow li:nth-child(3) span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li:nth-child(3) span {$/;"	function	line:61
+.cb-slideshow li:nth-child(4) span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li:nth-child(4) span {$/;"	function	line:69
+.cb-slideshow li:nth-child(5) span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li:nth-child(5) span {$/;"	function	line:77
+.cb-slideshow li:nth-child(6) span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.cb-slideshow li:nth-child(6) span {$/;"	function	line:85
+@-webkit-keyframes imageAnimation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-webkit-keyframes imageAnimation {$/;"	function	line:94
+0%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    0% { opacity: 0;$/;"	function	line:95
+8%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    8% { opacity: 1;$/;"	function	line:97
+17%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    17% { opacity: 1 }$/;"	function	line:99
+25%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    25% { opacity: 0 }$/;"	function	line:100
+100%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    100% { opacity: 0 }$/;"	function	line:101
+@-moz-keyframes imageAnimation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-moz-keyframes imageAnimation {$/;"	function	line:103
+0%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    0% { opacity: 0;$/;"	function	line:104
+8%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    8% { opacity: 1;$/;"	function	line:106
+17%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    17% { opacity: 1 }$/;"	function	line:108
+25%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    25% { opacity: 0 }$/;"	function	line:109
+100%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    100% { opacity: 0 }$/;"	function	line:110
+@-o-keyframes imageAnimation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-o-keyframes imageAnimation {$/;"	function	line:112
+0%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    0% { opacity: 0;$/;"	function	line:113
+8%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    8% { opacity: 1;$/;"	function	line:115
+17%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    17% { opacity: 1 }$/;"	function	line:117
+25%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    25% { opacity: 0 }$/;"	function	line:118
+100%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    100% { opacity: 0 }$/;"	function	line:119
+@-ms-keyframes imageAnimation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-ms-keyframes imageAnimation {$/;"	function	line:121
+0%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    0% { opacity: 0;$/;"	function	line:122
+8%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    8% { opacity: 1;$/;"	function	line:124
+17%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    17% { opacity: 1 }$/;"	function	line:126
+25%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    25% { opacity: 0 }$/;"	function	line:127
+100%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    100% { opacity: 0 }$/;"	function	line:128
+@keyframes imageAnimation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@keyframes imageAnimation {$/;"	function	line:130
+0%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    0% { opacity: 0;$/;"	function	line:131
+8%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    8% { opacity: 1;$/;"	function	line:133
+17%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    17% { opacity: 1 }$/;"	function	line:135
+25%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    25% { opacity: 0 }$/;"	function	line:136
+100%	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    100% { opacity: 0 }$/;"	function	line:137
+.no-cssanimations .cb-slideshow li span	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.no-cssanimations .cb-slideshow li span{$/;"	function	line:140
+.f_container	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.f_container {$/;"	function	line:148
+.container	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.container {$/;"	function	line:155
+.header	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.header {$/;"	function	line:162
+.header img	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.header img {$/;"	function	line:169
+.navigation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.navigation {$/;"	function	line:179
+nav	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^nav{$/;"	function	line:189
+ul	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^ul {$/;"	function	line:193
+li	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^li {$/;"	function	line:200
+a	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^a {$/;"	function	line:205
+nav li a:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^nav li a:hover {$/;"	function	line:215
+nav li:last-child	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^nav li:last-child {$/;"	function	line:219
+.slogan	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.slogan {$/;"	function	line:223
+.sloan_box	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.sloan_box {$/;"	function	line:229
+.sloan_box h1	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.sloan_box h1 {$/;"	function	line:237
+.b_header	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_header {$/;"	function	line:249
+.b_logo	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_logo {$/;"	function	line:256
+.b_logo img	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_logo img {$/;"	function	line:263
+.b_navigation	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation {$/;"	function	line:273
+.b_navigation nav	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation nav{$/;"	function	line:281
+.b_navigation ul	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation ul {$/;"	function	line:291
+.b_navigation li	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation li {$/;"	function	line:298
+.b_navigation a	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation a {$/;"	function	line:303
+.b_navigation nav li a:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation nav li a:hover {$/;"	function	line:313
+.b_navigation nav li:last-child	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.b_navigation nav li:last-child {$/;"	function	line:317
+.layout	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.layout {$/;"	function	line:321
+.left	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.left {$/;"	function	line:328
+.text	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.text {$/;"	function	line:335
+.text h2	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.text h2 {$/;"	function	line:343
+.text p	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.text p {$/;"	function	line:354
+.right	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.right {$/;"	function	line:366
+.image	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.image {$/;"	function	line:373
+.image img	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.image img {$/;"	function	line:382
+@keyframes fadein	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@keyframes fadein {$/;"	function	line:393
+from	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    from {$/;"	function	line:394
+to	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    to {$/;"	function	line:397
+@-moz-keyframes fadein	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-moz-keyframes fadein { \/* Firefox *\/$/;"	function	line:401
+from	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    from {$/;"	function	line:402
+to	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    to {$/;"	function	line:405
+@-webkit-keyframes fadein	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-webkit-keyframes fadein { \/* Safari and Chrome *\/$/;"	function	line:409
+from	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    from {$/;"	function	line:410
+to	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    to {$/;"	function	line:413
+@-o-keyframes fadein	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^@-o-keyframes fadein { \/* Opera *\/$/;"	function	line:417
+from	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    from {$/;"	function	line:418
+to	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^    to {$/;"	function	line:421
+.unselectable	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.unselectable {$/;"	function	line:435
+canvas	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^canvas {$/;"	function	line:444
+#lib	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#lib {$/;"	function	line:448
+#libCan	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#libCan {$/;"	function	line:453
+#priceContainer	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#priceContainer {$/;"	function	line:459
+#priceContainer h2	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#priceContainer h2 {$/;"	function	line:475
+#priceContainer h6	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#priceContainer h6 {$/;"	function	line:479
+#priceContainer h6::after	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#priceContainer h6::after {$/;"	function	line:483
+#canL1	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#canL1 {$/;"	function	line:488
+#canL2	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#canL2 {$/;"	function	line:493
+#canL4	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#canL4 {$/;"	function	line:499
+#bg	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#bg {$/;"	function	line:503
+#download	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#download{$/;"	function	line:509
+#builderContainer	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#builderContainer {$/;"	function	line:514
+.builder	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.builder {$/;"	function	line:523
+#canvases	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#canvases {$/;"	function	line:533
+#right	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#right {$/;"	function	line:541
+h4.sectionTitle	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^h4.sectionTitle {$/;"	function	line:549
+#cabinets	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#cabinets {$/;"	function	line:559
+.topBar	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.topBar {$/;"	function	line:564
+.price	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.price {$/;"	function	line:576
+#totalPrice	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#totalPrice {$/;"	function	line:588
+#totalPrice:after	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#totalPrice:after {$/;"	function	line:594
+.topBar *	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.topBar * {$/;"	function	line:600
+.mainTitle	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.mainTitle {$/;"	function	line:605
+#flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#flashMessage {$/;"	function	line:618
+#close	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#close {$/;"	function	line:639
+#error	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#error {$/;"	function	line:650
+#exp	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#exp {$/;"	function	line:655
+.btn	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.btn {$/;"	function	line:659
+.btn:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.btn:hover {$/;"	function	line:673
+.btn:focus	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.btn:focus {$/;"	function	line:678
+.buttonContainer	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.buttonContainer {$/;"	function	line:682
+.settings	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.settings {$/;"	function	line:687
+.settings:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.settings:hover {$/;"	function	line:695
+#editFloor	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#editFloor {$/;"	function	line:700
+#grid	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^#grid {$/;"	function	line:710
+input[type="file"]	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^input[type="file"] {$/;"	function	line:717
+.custom-file-upload	/Users/miron/DEV/kitchenProject/kitchenProject/css/m.css	/^.custom-file-upload {$/;"	function	line:721
 html	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <html class="no-js" lang="en">$/;"	function	line:2
 head	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <head>$/;"	function	line:3
 meta	/Users/miron/DEV/kitchenProject/kitchenProject/builder.html	/^    <meta charset='utf-8'\/>$/;"	function	line:4
@@ -218,51 +351,3 @@ h4.sectionTitle	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^h4
 #grid	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#grid {$/;"	function	line:710
 input[type="file"]	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^input[type="file"] {$/;"	function	line:717
 .custom-file-upload	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.custom-file-upload {$/;"	function	line:721
-setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^setTimeout(function(){$/;"	function	line:46
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:151
-drawingFloor.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^      drawingFloor = {$/;"	property	line:175
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:151
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:367
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:367
-diff	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function diff(a,b) {$/;"	function	line:377
-diff	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function diff(a,b) {$/;"	function	line:377
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:384
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:384
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:423
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:423
-getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getClosest(test, arr) {$/;"	function	line:441
-getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getClosest(test, arr) {$/;"	function	line:441
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:469
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:469
-isInsideFloor	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function isInsideFloor (item) {$/;"	function	line:498
-isInsideFloor	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function isInsideFloor (item) {$/;"	function	line:498
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:531
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:531
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:548
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:548
-drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:560
-drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:560
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:594
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:594
-sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^  Math.sign = function(x) {$/;"	function	line:626
-Math.sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^if (!Math.sign) {$/;"	function	line:625
-makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function makeImg(){$/;"	function	line:644
-makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function makeImg(){$/;"	function	line:644
-flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:666
-setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    setTimeout(function(){$/;"	function	line:689
-flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:666
-closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function closeCurrentFlashMessage() {$/;"	function	line:695
-closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function closeCurrentFlashMessage() {$/;"	function	line:695
-updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updateEditButton() {$/;"	function	line:703
-updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updateEditButton() {$/;"	function	line:703
-saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:720
-saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:720
-loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadFileContent() {$/;"	function	line:732
-onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^   oFReader.onload = function (oFREvent) {$/;"	function	line:735
-loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    loadJSON(oFREvent.target.result, function(fileContent) {$/;"	function	line:737
-oFReader.onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^   oFReader.readAsDataURL(document.getElementById("uploadText").files[0]);$/;"	function	line:734
-loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadFileContent() {$/;"	function	line:732
-loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadJSON(url, callback) {$/;"	function	line:757
-onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    xobj.onreadystatechange = function() {$/;"	function	line:761
-xobj.onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    xobj.open('GET', url, true);$/;"	function	line:760
-loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadJSON(url, callback) {$/;"	function	line:757
