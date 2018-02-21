@@ -522,6 +522,8 @@ canvas {
   font-family: 'Open sans', sans-serif;
   transition: all 0.5s ease;
   opacity: 0;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
 }
 
 
@@ -544,4 +546,28 @@ canvas {
 
 #exp {
   margin-top: 7px;
+}
+
+.btn {
+  background: #bbbbbb;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#buttonContainer {
+  display: flex;
+}
+
+#editFloor {
+ background: limegreen;
+}
+
+#grid {
+
 }

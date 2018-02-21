@@ -43,12 +43,14 @@
         <canvas class="can" id="canL2" width="950" height="600"></canvas>
         <canvas class="can" id="bg" width="950" height="600"></canvas>
         <div id="right">
+          <div id="buttonContainer">
+            <button class="btn" type="button" id="editFloor">SAVE FLOOR</button>
+            <button class="btn" type="button" id="grid">TURN SNAP GRID <b>OFF</b></button>
+          </div>
           <canvas id="libCan" width="400" height="400"></canvas>
-
           <div id="priceContainer" class="unselectable">
-            <button type="button" id="clear">CLEAR</button>
-            <button type="button" id="grid">TURN SNAP GRID <b>OFF</b></button>
-            <button type="button" id="editFloor">EDIT FLOOR</button>
+            <button class="btn" type="button" id="clear">CLEAR</button>
+
             <h3>Total Price</h3>
             <h6 id="totalPrice">0</h6>
           </div>
