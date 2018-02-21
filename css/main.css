@@ -514,15 +514,12 @@ canvas {
 
 #bg {
   z-index: 10;
+  background: white;
 }
 
-/* download canvas */
+/* download btn */
 #download{
-  color:grey;
-  border: 1px solid grey;
-  position: relative;
-  left:25%;
-  width:50%;
+
 }
 
 

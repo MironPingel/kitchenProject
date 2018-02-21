@@ -36,6 +36,7 @@ let flash = document.getElementById('flashMessage');
 let errorTitle = document.getElementById('error');
 let errorDesc = document.getElementById('exp');
 let closeFlash = document.getElementById('close');
+let saveBtn = document.getElementById('save');
 
 
 // Initial message
@@ -99,9 +100,33 @@ floorBtn.addEventListener("click", function(e) {
   update(mousePos = null, bg);
 });
 
+// Check if close button of flash message was clicked
 closeFlash.addEventListener("click", function(e) {
   closeCurrentFlashMessage();
 });
+
+// Check if save button was clicked
+saveBtn.addEventListener("click", function(e) {
+  let state = {};
+
+  if (floor[0] && items[0]) {
+    state = {
+      "items": items,
+      "floor": floor,
+    };
+    saveCurrentStateToFile(JSON.stringify(state), Date.now()+'.json', 'text/plain');
+
+  } else if (items[0]){
+    state = {
+      "items": items,
+    };
+    saveCurrentStateToFile(JSON.stringify(state), Date.now()+'.json', 'text/plain');
+
+  } else {
+    flashMessage("No content", "You have not yet added any content. Try saving again, after you have done so.", "error", 3000)
+  }
+});
+
 
 
 
@@ -676,4 +701,15 @@ function updateEditButton() {
     floorBtn.style.background = "limegreen";
     floorBtn.innerHTML = "SAVE FLOOR";
   }
+}
+
+
+
+
+function saveCurrentStateToFile(text, name, type) {
+    let a = document.createElement("a");
+    let file = new Blob([text], {type: type});
+    a.href = URL.createObjectURL(file);
+    a.download = name;
+    a.click();
 }
