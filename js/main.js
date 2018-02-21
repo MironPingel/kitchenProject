@@ -479,6 +479,7 @@ function updatePrice() {
   }
 
   priceText.innerHTML = price;
+  totalPrice = price;
 }
 
 
@@ -588,4 +589,8 @@ var can3 = document.getElementById('canL4');
 var ctx3 = can3.getContext('2d');
 ctx3.drawImage(canL1, 0, 0);
 ctx3.drawImage(canL2, 0, 0);
+ctx3.font = '28px sans-serif';
+ctx3.textAlign = 'left';
+ctx3.fillStyle = 'white'
+ctx3.fillText('total price = ' + totalPrice + ' kroner' ,20, 20);
 }
