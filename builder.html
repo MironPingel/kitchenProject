@@ -52,21 +52,26 @@
         </div>
       </div>
 
-       <script>
-      // download canvas
-      function downloadCanvas(link, canvasId, filename) {
-          link.href = document.getElementById(canvasId).toDataURL();
-          link.download = filename;
-      }
-      document.getElementById('download').addEventListener('click', function() {
-          makeImg();
-          downloadCanvas(this, 'canL4', 'MyNewKitchen.jpg');
-      }, false);
-      </script>  -->
+
 
         <script src="js/itemTypes.js" charset="utf-8"></script>
         <script src="js/main.js" charset="utf-8"></script>
         <script src="js/lib.js" charset="utf-8"></script>
         <script src="js/shape_drawer.js"></script>
+
+        <script>
+       // download canvas
+       function downloadCanvas(link, canvasId, filename) {
+           link.href = document.getElementById(canvasId).toDataURL();
+           link.download = filename;
+       }
+       document.getElementById('download').addEventListener('click', function() {
+           makeImg();
+           var can3 = document.getElementById('canL4');
+           var ctx3 = can3.getContext('2d');
+           downloadCanvas(this, 'canL4', 'MyNewKitchen.jpg');
+           ctx3.clearRect(0, 0, canL4.width, canL4.height);
+       }, false);
+       </script>  -->
     </body>
 </html>
