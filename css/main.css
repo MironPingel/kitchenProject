@@ -512,12 +512,10 @@ canvas {
 
 
 #builderContainer {
-  padding-top: 70px;
+  padding-top: 10px;
   width: 100%;
   margin: 0px;
-  /* width: 90%;
-  margin-left: 50%;
-  transform: translate(-50%); */
+  overflow: hidden;
 }
 
 .builder {
@@ -620,8 +618,7 @@ h4.sectionTitle {
   z-index: 5000;
   bottom: 50px;
   width: 550px;
-  left: 0;
-  transform: translate(10%);
+  left: 25px;
 
   padding: 15px 25px;
 

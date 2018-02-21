@@ -690,7 +690,7 @@ function flashMessage(title, message, type, duration) {
   }
 
   flash.style.opacity = 1;
-  flash.style.left = '25%';
+  flash.style.left = '55px';
 
   if (!duration) {
 
@@ -703,7 +703,7 @@ function flashMessage(title, message, type, duration) {
 
 function closeCurrentFlashMessage() {
   flash.style.opacity = 0;
-  flash.style.left = '-25%';
+  flash.style.left = '150px';
 }
 
 
