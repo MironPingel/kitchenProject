@@ -32,6 +32,10 @@ let clearBtn = document.getElementById('clear');
 let gridBtn = document.getElementById('grid');
 let floorBtn = document.getElementById('editFloor');
 let priceText = document.getElementById('totalPrice');
+let flash = document.getElementById('flashMessage');
+let errorTitle = document.getElementById('error');
+let errorDesc = document.getElementById('exp');
+let closeFlash = document.getElementById('close');
 
 
 // GRID
@@ -86,6 +90,12 @@ floorBtn.addEventListener("click", function(e) {
   editFloor = !editFloor;
   update(mousePos = null, can1);
 });
+
+closeFlash.addEventListener("click", function(e) {
+  closeCurrentFlashMessage();
+});
+
+
 
 
 // Update Canvas on MouseMove
@@ -354,7 +364,7 @@ function placeBox (mousePos) {
         box.draw(currentContext);
         updatePrice();
       } else { // if not - then it cant be placed
-        alert("You cant place Items ontop of each other.");
+        flashMessage("Overlap!", "You cant place Items ontop of each other.", "error")
       }
 
     } else {
@@ -587,4 +597,32 @@ if (!Math.sign) {
     //         +x           // Then the result will be x, (or) if x is
     //                      // not a number, then x converts to number
   };
+}
+
+function flashMessage(title, message, type) {
+  errorTitle.innerHTML = title;
+  if (message) {
+    errorDesc.innerHTML = message;
+  } else {
+    errorDesc.innerHTML = '';
+    errorDesc.style.display = 'none';
+  }
+
+  if (type === "succes") {
+    flash.style.borderLeft = "8px solid limegreen";
+  } else if (type === "error") {
+    flash.style.borderLeft = "8px solid red";
+  }
+
+  flash.style.opacity = 1;
+  flash.style.top = '95px';
+
+  setTimeout(function(){
+    closeCurrentFlashMessage()
+  }, 2900);
+}
+
+function closeCurrentFlashMessage() {
+  flash.style.opacity = 0;
+  flash.style.top = '-30px';
 }

@@ -23,7 +23,7 @@ lib.addEventListener('click', function(evt) {
   for (var i = 0; i < drawnItems.length; i++) {
     if (drawnItems[i].isClicked(mousePos)) {
       if (editFloor) {
-        alert("You are still in in floor edit mode. You need to switch that off before you can place elements.");
+        flashMessage("Currently editing Floor", "You are still in in floor edit mode. You need to switch that off before you can place elements.", "error");
       } else {
         selectedType = drawnItems[i].type;
         console.log(selectedType);

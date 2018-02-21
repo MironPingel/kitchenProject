@@ -502,3 +502,46 @@ canvas {
   left:25%;
   width:50%;
 }
+
+
+
+
+
+
+#flashMessage {
+  position: absolute;
+  z-index: 5000;
+  left: 50%;
+  transform: translate(-50%);
+  top: -30px;
+
+  padding: 15px 25px;
+
+  background: white;
+  border-left: 8px solid grey;
+  font-family: 'Open sans', sans-serif;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+
+
+#close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: none;
+  border: none;
+
+  font-size: 20px;
+  color: grey;
+}
+
+#error {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#exp {
+  margin-top: 7px;
+}
