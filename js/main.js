@@ -608,7 +608,7 @@ if (!Math.sign) {
     //                      // not a number, then x converts to number
   };
 }
-<<<<<<< HEAD
+
 function makeImg(){
 var b = document.getElementById('download')
 var can3 = document.getElementById('canL4');
@@ -619,7 +619,8 @@ ctx3.font = '28px sans-serif';
 ctx3.textAlign = 'left';
 ctx3.fillStyle = 'white'
 ctx3.fillText('total price = ' + totalPrice + ' kroner' ,20, 20);
-=======
+}
+
 
 function flashMessage(title, message, type, duration) {
   errorTitle.innerHTML = title;
@@ -664,7 +665,6 @@ function updateEditButton() {
     floorBtn.style.background = "grey";
   } else {
     floorBtn.style.background = "limegreen";
-    floorBtn.innerHTML = "SAVE FLOOR"
+    floorBtn.innerHTML = "SAVE FLOOR";
   }
->>>>>>> betterControls
 }

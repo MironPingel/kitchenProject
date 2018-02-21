@@ -508,6 +508,10 @@ canvas {
   /* background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),url("../images/tile2.png"); */
 }
 
+#canL4 {
+  border: none;
+}
+
 #bg {
   z-index: 10;
 }
