@@ -16,8 +16,8 @@ itemTypes["floor60"] = {
 itemTypes["floor40"] = {
     "x": 250,
     "y": 150,
-    "width": 60,
-    "height": 40,
+    "width": 40,
+    "height": 60,
     "color": 'BurlyWood',
     "title": "Floor 40",
     "price": 1299,

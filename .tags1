@@ -4,30 +4,35 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:98
-drawingFloor.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^      drawingFloor = {$/;"	property	line:119
-update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:98
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:310
-getMousePos	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getMousePos(canvas, evt) {$/;"	function	line:310
-diff	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function diff(a,b) {$/;"	function	line:320
-diff	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function diff(a,b) {$/;"	function	line:320
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:327
-placeBox	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function placeBox (mousePos) {$/;"	function	line:327
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:366
-checkBoundries	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkBoundries (item) {$/;"	function	line:366
-getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getClosest(test, arr) {$/;"	function	line:384
-getClosest	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function getClosest(test, arr) {$/;"	function	line:384
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:412
-checkCollision	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function checkCollision (item) {$/;"	function	line:412
-isInsideFloor	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function isInsideFloor (item) {$/;"	function	line:441
-isInsideFloor	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function isInsideFloor (item) {$/;"	function	line:441
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:474
-updatePrice	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updatePrice() {$/;"	function	line:474
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:490
-rotateItem	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function rotateItem (item) {$/;"	function	line:490
-drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:502
-drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:502
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:536
-Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:536
-sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^  Math.sign = function(x) {$/;"	function	line:568
-Math.sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^if (!Math.sign) {$/;"	function	line:567
+itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["floor60"] = {$/;"	property	line:5
+itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 100,$/;"	property	line:6
+itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 150,$/;"	property	line:7
+itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 60,$/;"	property	line:8
+itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 60,$/;"	property	line:9
+itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'BurlyWood',$/;"	property	line:10
+itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Floor 60",$/;"	property	line:11
+itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 1899,$/;"	property	line:12
+itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["floor40"] = {$/;"	property	line:16
+itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 250,$/;"	property	line:17
+itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 150,$/;"	property	line:18
+itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 40,$/;"	property	line:19
+itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 60,$/;"	property	line:20
+itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'BurlyWood',$/;"	property	line:21
+itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Floor 40",$/;"	property	line:22
+itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 1299,$/;"	property	line:23
+itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["wall30"] = {$/;"	property	line:27
+itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 100,$/;"	property	line:28
+itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 350,$/;"	property	line:29
+itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 30,$/;"	property	line:30
+itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 30,$/;"	property	line:31
+itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'Peru',$/;"	property	line:32
+itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Wall 30",$/;"	property	line:33
+itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 1499,$/;"	property	line:34
+itemTypes.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^itemTypes["wall60"] = {$/;"	property	line:38
+itemTypes.y	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "x": 250,$/;"	property	line:39
+itemTypes.width	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "y": 350,$/;"	property	line:40
+itemTypes.height	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "width": 60,$/;"	property	line:41
+itemTypes.color	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "height": 30,$/;"	property	line:42
+itemTypes.title	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "color": 'Peru',$/;"	property	line:43
+itemTypes.price	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "title": "Wall 60",$/;"	property	line:44
+itemTypes.layer	/Users/miron/DEV/kitchenProject/kitchenProject/js/itemTypes.js	/^    "price": 2199,$/;"	property	line:45
