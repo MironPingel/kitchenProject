@@ -713,3 +713,43 @@ function saveCurrentStateToFile(text, name, type) {
     a.download = name;
     a.click();
 }
+
+
+
+
+function loadFileContent() {
+   var oFReader = new FileReader();
+   oFReader.readAsDataURL(document.getElementById("uploadText").files[0]);
+   oFReader.onload = function (oFREvent) {
+
+    loadJSON(oFREvent.target.result, function(fileContent) {
+      let stateFromFile = JSON.parse(fileContent);
+
+      // Turn boxes into box objects before passing them to items array
+      let itemObjects = [];
+      for(let obj of stateFromFile.items) {
+        let box = new Box(obj.x, obj.y, obj.width, obj.height, obj.color, obj.type, obj.price, obj.layer);
+        itemObjects.push(box);
+      }
+
+      items = itemObjects;
+      floor = stateFromFile.floor;
+      update(mousePos = null, can1);
+      update(mousePos = null, can2);
+      update(mousePos = null, bg);
+    })
+   };
+};
+
+
+function loadJSON(url, callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', url, true);
+    xobj.onreadystatechange = function() {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+        }
+    }
+    xobj.send(null);
+}
