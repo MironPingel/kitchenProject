@@ -21,9 +21,13 @@ for (var type in itemTypes) {
 lib.addEventListener('click', function(evt) {
   let mousePos = getMousePos(lib, evt);
   for (var i = 0; i < drawnItems.length; i++) {
-    if (drawnItems[i].isClicked(mousePos) && !editFloor) {
-      selectedType = drawnItems[i].type;
-      console.log(selectedType);
+    if (drawnItems[i].isClicked(mousePos)) {
+      if (editFloor) {
+        alert("You are still in in floor edit mode. You need to switch that off before you can place elements.");
+      } else {
+        selectedType = drawnItems[i].type;
+        console.log(selectedType);
+      }
     }
   }
 })

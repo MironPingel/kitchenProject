@@ -486,8 +486,12 @@ canvas {
 
 #canL2 {
   position: absolute;
-  z-index: 0;
+  z-index: 50;
   /* background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),url("../images/tile2.png"); */
+}
+
+#bg {
+  z-index: 10;
 }
 
 /* download canvas */

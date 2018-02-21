@@ -4,6 +4,9 @@ let canContext = can1.getContext('2d');
 let can2 = document.getElementById('canL2');
 let can2Context = can2.getContext('2d');
 
+let bgCan = document.getElementById('bg');
+let bgContext = bgCan.getContext('2d');
+
 let currentCan = can1;
 let currentContext = currentCan.getContext('2d');
 
@@ -27,6 +30,7 @@ let drawingFloor = null;
 // CONTROLLS & HTML ELEMENTS
 let clearBtn = document.getElementById('clear');
 let gridBtn = document.getElementById('grid');
+let floorBtn = document.getElementById('editFloor');
 let priceText = document.getElementById('totalPrice');
 
 
@@ -73,11 +77,15 @@ drawGrid();
 
 
 // Check if clear button is isClicked
-
 clearBtn.addEventListener("click", function(e) {
   selectedType = null;
 });
 
+// Check if editMode button is clicked
+floorBtn.addEventListener("click", function(e) {
+  editFloor = !editFloor;
+  update(mousePos = null, can1);
+});
 
 
 // Update Canvas on MouseMove
@@ -111,7 +119,7 @@ function update(mousePos, canvas) {
       // TODO change to context of Background Canvas
       canContext.beginPath();
       canContext.rect(floorStartPoint.x, floorStartPoint.y, w, h);
-      canContext.fillStyle = "lightgrey";
+      canContext.fillStyle = "#f3f3f3";
       canContext.fill();
 
       // This object will be used to create the floor item & push it into the floor array
@@ -150,7 +158,7 @@ function update(mousePos, canvas) {
     let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
 
     // Turn element red if outside of floor
-    if (editFloor && !isInsideFloor(placeholder)) {
+    if (!isInsideFloor(placeholder)) {
       placeholder.color = "red";
     }
 
@@ -172,14 +180,14 @@ function update(mousePos, canvas) {
     }
   }
 
-  // TODO change to context of Background Canvas
+
   if (floor) {
     // Draw floor - follow mouse
     for(let box of floor) {
-      canContext.beginPath();
-      canContext.rect(box.x, box.y, box.width, box.height);
-      canContext.fillStyle = "grey";
-      canContext.fill();
+      bgContext.beginPath();
+      bgContext.rect(box.x, box.y, box.width, box.height);
+      bgContext.fillStyle = "lightgrey";
+      bgContext.fill();
     }
   }
 }
