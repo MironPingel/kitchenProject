@@ -10,19 +10,24 @@ let currentContext = currentCan.getContext('2d');
 let lib = document.getElementById('libCan');
 let libContext = lib.getContext('2d');
 
+// State
 let items = [];
 let cs = null; // cs = currentSelection
 let itemOnMove = false;
 let selectedType = null;
 let totalPrice = 0;
-let priceText = document.getElementById('totalPrice');
 let lastMousePos = null;
 
+let floor = [];
+let editFloor = true;
+let floorStartPoint = null;
+let drawingFloor = null;
 
-// CONTROLLS
+
+// CONTROLLS & HTML ELEMENTS
 let clearBtn = document.getElementById('clear');
 let gridBtn = document.getElementById('grid');
-
+let priceText = document.getElementById('totalPrice');
 
 
 // GRID
@@ -38,6 +43,8 @@ gridBtn.addEventListener("click", function(e) {
   }
 });
 
+
+
 let ratio = can1.width/can1.height;
 let stepx = can1.width/60;
 let stepy = (can1.height/60) * ratio;
@@ -48,6 +55,8 @@ if (can1.height > can1.width) {
   stepy = can1.height/60;
 }
 
+
+
 let xGrid = [];
 let yGrid = [];
 for (var i = 0; i < can1.width; i = i+stepx) {
@@ -57,6 +66,7 @@ for (var i = 0; i < can1.width; i = i+stepx) {
 for (var i = 0; i < can1.height; i = i+stepy) {
   yGrid.push(i);
 }
+
 drawGrid();
 
 
@@ -86,6 +96,37 @@ lib.addEventListener('mousemove', function(evt) {
 
 // Runs on every mouseMovement
 function update(mousePos, canvas) {
+  if (editFloor) {
+    drawGrid();
+
+    if (floorStartPoint) {
+      // Store if width and height are postive or negative
+      let initWidthSign = Math.sign(mousePos.x - floorStartPoint.x);
+      let initHeightSign = Math.sign(mousePos.y - floorStartPoint.y);
+      // snap width and height to grid (getClosest) and transform to previous sign (pos/neg)
+      let w = getClosest(mousePos.x - floorStartPoint.x, xGrid) * initWidthSign;
+      let h = getClosest(mousePos.y - floorStartPoint.y, yGrid) * initHeightSign;
+
+      // Draw floor while creating - follow mouse
+      // TODO change to context of Background Canvas
+      canContext.beginPath();
+      canContext.rect(floorStartPoint.x, floorStartPoint.y, w, h);
+      canContext.fillStyle = "lightgrey";
+      canContext.fill();
+
+      // This object will be used to create the floor item & push it into the floor array
+      // This is done inside the ClickEvent handler
+      drawingFloor = {
+        "x": floorStartPoint.x,
+        "y": floorStartPoint.y,
+        "width": w,
+        "height": h,
+      }
+    }
+  }
+
+  // If no mousePosition is passed to the function (e.g. from keyboardEvents)
+  // Use previous mousePosition
   if (mousePos === null) {
     mousePos = lastMousePos;
   } else {
@@ -107,8 +148,16 @@ function update(mousePos, canvas) {
     let x = mousePos.x;
     let y = mousePos.y;
     let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
+
+    // Turn element red if outside of floor
+    if (!isInsideFloor(placeholder)) {
+      placeholder.color = "red";
+    }
+
     placeholder.draw(currentContext)
+    console.log(isInsideFloor(placeholder));
   }
+
 
   // Draw all items in items array
   for (let box of items) {
@@ -122,6 +171,17 @@ function update(mousePos, canvas) {
       }
     }
   }
+
+  // TODO change to context of Background Canvas
+  if (floor) {
+    // Draw floor - follow mouse
+    for(let box of floor) {
+      canContext.beginPath();
+      canContext.rect(box.x, box.y, box.width, box.height);
+      canContext.fillStyle = "grey";
+      canContext.fill();
+    }
+  }
 }
 
 
@@ -130,7 +190,6 @@ function update(mousePos, canvas) {
 
 // Listen for r press (to rotate)
 document.addEventListener("keypress", function(event) {
-
     if (event.keyCode == 114) {
       if (cs) {
         rotateItem(cs);
@@ -144,6 +203,15 @@ document.addEventListener("keypress", function(event) {
 });
 
 
+// Listen for ESC press (to abort drawing of Floor)
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode == 27) {
+      floorStartPoint = null;
+      drawingFloor = null;
+      update(mousePos = null, can1);
+    }
+});
+
 
 
 
@@ -156,42 +224,61 @@ document.addEventListener("keypress", function(event) {
 currentCan.addEventListener('click', function(evt) {
   let mousePos = getMousePos(currentCan, evt);
 
-  // If item is "picked up" then do this onClick
-  if (itemOnMove) {
-    cs.x = mousePos.x - cs.width/2;
-    cs.y = mousePos.y - cs.height/2;
-    // Add the item that is "picked up" to the items array again
+  if (editFloor) {
 
-    items.push(checkBoundries(cs));
-    cs = null;
-    //cs = new Box(0,0,selectedType.width, selectedType.height, selectedType.color, selectedType.type, selectedType.price, selectedType.layer);
-    itemOnMove = false;
-
-  } else {  // If no item is currently "picked up"
-
-    let selectedTypeLayer = '';
-
-    if (selectedType !== null) {
-      selectedTypeLayer = itemTypes[selectedType].layer;
+    if (drawingFloor) {
+      floor.push(drawingFloor);
+      floorStartPoint = null;
+      drawingFloor = null;
+      update(mousePos, can1);
+    } else {
+      floorStartPoint = {
+        "x": getClosest(mousePos.x, xGrid),
+        "y": getClosest(mousePos.y, yGrid)
+      };
+      console.log("new");
     }
-    // First check if the click is inside an exsisting box
-    for (var i = 0; i < items.length; i++) {
 
-      if (items[i].isClicked(mousePos) && selectedTypeLayer !== "top") {
-        console.log(items[i]);
-        console.log("HIT!");
-        // Set global CS (currentSelection) = to the clicked Box
-        cs = items[i];
-        // Remove the selected box from items array
-        items.splice(i, 1);
-        // Set state to itemOnMove
-        itemOnMove = true;
+
+  } else {
+
+    // If item is "picked up" then do this onClick
+    if (itemOnMove) {
+      cs.x = mousePos.x - cs.width/2;
+      cs.y = mousePos.y - cs.height/2;
+      // Add the item that is "picked up" to the items array again
+
+      items.push(checkBoundries(cs));
+      cs = null;
+      //cs = new Box(0,0,selectedType.width, selectedType.height, selectedType.color, selectedType.type, selectedType.price, selectedType.layer);
+      itemOnMove = false;
+
+    } else {  // If no item is currently "picked up"
+
+      let selectedTypeLayer = '';
+
+      if (selectedType !== null) {
+        selectedTypeLayer = itemTypes[selectedType].layer;
       }
-    }
+      // First check if the click is inside an exsisting box
+      for (var i = 0; i < items.length; i++) {
 
-    // if not item is currently being moved, then create a new item onClick
-    if(!itemOnMove) {
-      placeBox(mousePos);
+        if (items[i].isClicked(mousePos) && selectedTypeLayer !== "top") {
+          console.log(items[i]);
+          console.log("HIT!");
+          // Set global CS (currentSelection) = to the clicked Box
+          cs = items[i];
+          // Remove the selected box from items array
+          items.splice(i, 1);
+          // Set state to itemOnMove
+          itemOnMove = true;
+        }
+      }
+
+      // if not item is currently being moved, then create a new item onClick
+      if(!itemOnMove) {
+        placeBox(mousePos);
+      }
     }
   }
 }, false); // end of EventListener (Click)
@@ -228,6 +315,11 @@ function getMousePos(canvas, evt) {
   };
 }
 
+
+// Difference (distance from startpoint)
+function diff(a,b) {
+  return Math.abs(a-b);
+}
 
 
 
@@ -290,6 +382,7 @@ function checkBoundries (item) {
 // Find closes Grid line
 // ARGUMENTS: test = coordiante, x or y   |   arr = grid array (x or y)
 function getClosest(test, arr) {
+  test = Math.abs(test);
   var num = result = 0;
   var flag = 0;
   for(var i = 0; i < arr.length; i++) {
@@ -314,7 +407,7 @@ function getClosest(test, arr) {
 
 
 
-// Check for collision/overlap
+// Check for collision/overlap with Items in Item array
 
 function checkCollision (item) {
 
@@ -339,6 +432,41 @@ function checkCollision (item) {
   }
   return false;
 }
+
+
+
+
+// Check for collision/overlap
+
+function isInsideFloor (item) {
+
+  let iX = item.x;
+  let iY = item.y;
+  let iW = item.width;
+  let iH = item.height;
+
+  for (var i = 0; i < floor.length; i++) {
+    let it = floor[i];
+    let x = it.x;
+    let y = it.y;
+    let w = it.width;
+    let h = it.height;
+
+    if (iX < x + w &&
+       iX + iW > x &&
+       iY < y + h &&
+       iH + iY > y) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+
+
+
+
 
 
 // Update price
@@ -432,4 +560,25 @@ function Box (x, y, width, height, color, type, price, layer) {
     return mousePos.x < xTop && mousePos.x > xLow && mousePos.y < yTop && mousePos.y > yLow;
   }
 
+}
+
+
+// SIGN polyfill
+if (!Math.sign) {
+  Math.sign = function(x) {
+    // If x is NaN, the result is NaN.
+    // If x is -0, the result is -0.
+    // If x is +0, the result is +0.
+    // If x is negative and not -0, the result is -1.
+    // If x is positive and not +0, the result is +1.
+    return ((x > 0) - (x < 0)) || +x;
+    // A more aesthetical persuado-representation is shown below
+    //
+    // ( (x > 0) ? 0 : 1 )  // if x is negative then negative one
+    //          +           // else (because you cant be both - and +)
+    // ( (x < 0) ? 0 : -1 ) // if x is positive then positive one
+    //         ||           // if x is 0, -0, or NaN, or not a number,
+    //         +x           // Then the result will be x, (or) if x is
+    //                      // not a number, then x converts to number
+  };
 }
