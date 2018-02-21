@@ -21,6 +21,8 @@ let selectedType = null;
 let totalPrice = 0;
 let lastMousePos = null;
 
+let gridVisible = false;
+
 let floor = [];
 let editFloor = true;
 let floorStartPoint = null;
@@ -715,7 +717,8 @@ function saveCurrentStateToFile(text, name, type) {
 }
 
 
-
+// Functions to load the content of the chosen file
+// The items and floor arrays will then be updated
 
 function loadFileContent() {
    var oFReader = new FileReader();
@@ -741,7 +744,7 @@ function loadFileContent() {
    };
 };
 
-
+// Async call to load contents of file
 function loadJSON(url, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
