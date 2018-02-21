@@ -4,7 +4,7 @@ let itemTypes = [];
 
 itemTypes["floor60"] = {
     "x": 100,
-    "y": 150,
+    "y": 110,
     "width": 60,
     "height": 60,
     "color": 'BurlyWood',
@@ -15,7 +15,7 @@ itemTypes["floor60"] = {
 
 itemTypes["floor40"] = {
     "x": 250,
-    "y": 150,
+    "y": 110,
     "width": 40,
     "height": 60,
     "color": 'BurlyWood',
@@ -26,7 +26,7 @@ itemTypes["floor40"] = {
 
 itemTypes["wall30"] = {
     "x": 100,
-    "y": 350,
+    "y": 310,
     "width": 30,
     "height": 30,
     "color": 'Peru',
@@ -37,7 +37,7 @@ itemTypes["wall30"] = {
 
 itemTypes["wall60"] = {
     "x": 250,
-    "y": 350,
+    "y": 310,
     "width": 60,
     "height": 30,
     "color": 'Peru',
