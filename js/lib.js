@@ -10,10 +10,10 @@ for (var type in itemTypes) {
 
     // Draw text for each element 50px above it
     libContext.font = '28px sans-serif';
-    libContext.textAlign = 'center';
-    libContext.fillText(t.title, t.x, t.y-60);
-    libContext.font = '16px sans-serif';
-    libContext.fillText(t.price + ' DKR', t.x, t.y-40);
+    libContext.textAlign = 'left';
+    libContext.fillText(t.title, t.x-t.width/2, t.y-60);
+    libContext.font = '17px sans-serif';
+    libContext.fillText(t.price + ' DKR', t.x-t.width/2, t.y-40);
   }
 }
 

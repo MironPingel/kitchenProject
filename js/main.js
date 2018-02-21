@@ -21,6 +21,7 @@ let selectedType = null;
 let totalPrice = 0;
 let lastMousePos = null;
 
+let gridTurnedOn = true;
 let gridVisible = false;
 
 let floor = [];
@@ -30,7 +31,7 @@ let drawingFloor = null;
 
 
 // CONTROLLS & HTML ELEMENTS
-let clearBtn = document.getElementById('clear');
+//let clearBtn = document.getElementById('clear');
 let gridBtn = document.getElementById('grid');
 let floorBtn = document.getElementById('editFloor');
 let priceText = document.getElementById('totalPrice');
@@ -41,13 +42,12 @@ let closeFlash = document.getElementById('close');
 let saveBtn = document.getElementById('save');
 
 
-// Initial message
+//Initial message
 setTimeout(function(){
   flashMessage("Start by drawing your Floor plan!", "You click anywhere inside the editor to start defining your floorsize. You can draw as many boxes as you like and let them overlap! <br>Press ESC to abort, while drawing a Box.", "succes");
 }, 600);
 
 // GRID
-let gridTurnedOn = true;
 gridBtn.addEventListener("click", function(e) {
   gridTurnedOn = !gridTurnedOn;
 
@@ -89,9 +89,9 @@ drawGrid();
 
 
 // Check if clear button is isClicked
-clearBtn.addEventListener("click", function(e) {
-  selectedType = null;
-});
+// clearBtn.addEventListener("click", function(e) {
+//   selectedType = null;
+// });
 
 // Check if editMode button is clicked
 floorBtn.addEventListener("click", function(e) {
@@ -153,6 +153,9 @@ function update(mousePos, canvas) {
     drawGrid();
 
     if (floorStartPoint) {
+      // Hide floorBtn
+      floorBtn.style.display = "none";
+
       // Store if width and height are postive or negative
       let initWidthSign = Math.sign(mousePos.x - floorStartPoint.x);
       let initHeightSign = Math.sign(mousePos.y - floorStartPoint.y);
@@ -175,6 +178,8 @@ function update(mousePos, canvas) {
         "width": w,
         "height": h,
       }
+    } else {
+      floorBtn.style.display = "block";
     }
   }
 
@@ -676,7 +681,7 @@ function flashMessage(title, message, type, duration) {
   }
 
   flash.style.opacity = 1;
-  flash.style.top = '95px';
+  flash.style.left = '25%';
 
   if (!duration) {
 
@@ -689,7 +694,7 @@ function flashMessage(title, message, type, duration) {
 
 function closeCurrentFlashMessage() {
   flash.style.opacity = 0;
-  flash.style.top = '-30px';
+  flash.style.left = '-25%';
 }
 
 
@@ -698,10 +703,14 @@ function closeCurrentFlashMessage() {
 function updateEditButton() {
   if (!editFloor) {
     floorBtn.innerHTML = "EDIT FLOOR"
-    floorBtn.style.background = "grey";
+    floorBtn.style.background = "none";
+    floorBtn.style.border = "3px solid lightgrey";
+    floorBtn.style.color = "darkgrey";
   } else {
     floorBtn.style.background = "limegreen";
+    floorBtn.style.border = "none";
     floorBtn.innerHTML = "SAVE FLOOR";
+    floorBtn.style.color = "white";
   }
 }
 

@@ -3,8 +3,8 @@
 let itemTypes = [];
 
 itemTypes["floor60"] = {
-    "x": 100,
-    "y": 110,
+    "x": 40,
+    "y": 85,
     "width": 60,
     "height": 60,
     "color": 'BurlyWood',
@@ -14,8 +14,8 @@ itemTypes["floor60"] = {
   };
 
 itemTypes["floor40"] = {
-    "x": 250,
-    "y": 110,
+    "x": 220,
+    "y": 85,
     "width": 40,
     "height": 60,
     "color": 'BurlyWood',
@@ -25,8 +25,8 @@ itemTypes["floor40"] = {
   };
 
 itemTypes["wall30"] = {
-    "x": 100,
-    "y": 310,
+    "x": 30,
+    "y": 230,
     "width": 30,
     "height": 30,
     "color": 'Peru',
@@ -36,8 +36,8 @@ itemTypes["wall30"] = {
 };
 
 itemTypes["wall60"] = {
-    "x": 250,
-    "y": 310,
+    "x": 220,
+    "y": 230,
     "width": 60,
     "height": 30,
     "color": 'Peru',

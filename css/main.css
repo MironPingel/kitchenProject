@@ -441,19 +441,8 @@ nav li:last-child {
   user-select: none;
 }
 
-#canvases {
-  display: flex;
-  margin: 0px;
-  padding: 50px 20px;
-}
-
 canvas {
   border: 10px solid lightgrey;
-}
-
-#right {
-  position: absolute;
-  right: 0px;
 }
 
 #lib {
@@ -462,10 +451,9 @@ canvas {
 }
 
 #libCan {
-  margin-left: 20px;
   border: none;
   position: relative;
-  right: 0px;
+  margin-left: -10px;
 }
 
 #priceContainer {
@@ -523,16 +511,117 @@ canvas {
 }
 
 
+#builderContainer {
+  padding-top: 70px;
+  width: 100%;
+  margin: 0px;
+  /* width: 90%;
+  margin-left: 50%;
+  transform: translate(-50%); */
+}
+
+.builder {
+  background: white;
+  position: relative;
+  box-sizing: border-box;
+  margin: 30px;
+  max-height: 700px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 45px 7px rgba(0,0,0,0.12)
+}
+
+#canvases {
+  display: inline-block;
+  margin: 0px;
+  margin-left: 25px;
+  width: 64%;
+  position: relative;
+}
+
+#right {
+  display: inline-block;
+  float: right;
+  background: white;
+  width: 28.5%;
+  margin-right: 0.5%;
+}
+
+h4.sectionTitle {
+  margin: 0px 0px 15px 0px;
+  padding-left: 10px;
+  border-left: 4px solid orange;
+  font-size: 26px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: darkgray;
+}
+
+#cabinets {
+  border-color: limegreen;
+}
 
 
+.topBar {
+  display: block;
+  align-content: flex-start;
+  border-radius: 10px 10px 0px 0px;
+  background: #808080;
+  height: 90px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+}
+
+.price {
+  border-radius: 4px;
+  background: #ebebeb;
+  border: 2px solid #ebebeb;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: grey;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin: 0px 5px 0px 0px;
+}
+
+#totalPrice {
+  color: limegreen;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+#totalPrice:after {
+  content: "DKR";
+  margin-left: 4px;
+}
+
+
+.topBar * {
+  display: inline-block;
+  float: right;
+}
+
+.mainTitle {
+  float: left;
+  display: inline-block;
+  color: white;
+  border-left: 7px solid orange;
+  padding: 0px 0px 0px 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.6rem;
+  margin: 0px;
+  line-height: 1;
+}
 
 
 #flashMessage {
-  position: absolute;
+  position: fixed;
   z-index: 5000;
-  left: 50%;
+  left: 25%;
   transform: translate(-50%);
-  top: -30px;
+  bottom: 50px;
+  width: 550px;
 
   padding: 15px 25px;
 
@@ -568,25 +657,66 @@ canvas {
 }
 
 .btn {
-  background: #bbbbbb;
-  border: none;
+  border-radius: 4px;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: none;
   padding: 12px 25px;
   font-size: 16px;
-  color: white;
+  color: rgba(255,255,255,0.9);
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin-left: 5px;
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+  border-color: white;
 }
 
 .buttonContainer {
   display: flex;
 }
 
+
+.settings {
+  margin-bottom: 5px;
+  background: none;
+  border: 2px solid lightgray;
+  color: darkgray;
+  border-radius: 4px;
+}
+
+.settings:hover {
+  background: lightgrey;
+  color: grey;
+}
+
 #editFloor {
- background: limegreen;
+  background: limegreen;
+  position: absolute;
+  color: white;
+  bottom: 565px;
+  right: -15px;
+  z-index: 4000;
+  border: none;
 }
 
 #grid {
 
+}
+
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
 }

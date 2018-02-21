@@ -32,44 +32,51 @@
         </div>
       </div>
 
-      <div id="canvases">
-        <div id="flashMessage">
-          <h3 id="error">Error</h3>
-          <p id="exp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-          <button type="button" id="close">X</button>
-        </div>
-
-        <canvas class="can" id="canL1" width="950" height="600"></canvas>
-        <canvas class="can" id="canL2" width="950" height="600"></canvas>
-        <canvas class="can" id="bg" width="950" height="600"></canvas>
-        <canvas class="can" id="canL4" width="950" height="600"></canvas>
-        <div id="right">
-          <div class="buttonContainer">
-            <button class="btn" type="button" id="editFloor">SAVE FLOOR</button>
-            <button class="btn" type="button" id="grid">TURN SNAP GRID <b>OFF</b></button>
-          </div>
-          <br>
-          <div class="buttonContainer">
-            <button class="btn" type="button" id="clear">CLEAR</button></button>
-          </div>
-
-          <canvas id="libCan" width="400" height="350"></canvas>
-
-          <div id="priceContainer" class="unselectable">
-            <h2>Total Price: <span id="totalPrice">0</span></h2>
-          </div>
-          <br>
-          <div class="buttonContainer">
-            <a class="btn" id="download">Download as image</a>
+      <div id="builderContainer">
+        <div class="builder">
+          <div class="topBar">
+            <h2 class="mainTitle">BUILDER</h2>
+            <a class="btn" id="download">Export as Image</a>
             <button class="btn"  type="button" id="save">Save document</button>
+            <label for="uploadText" class="btn">
+                Open file
+            </label>
+            <input class="fileContainer" id="uploadText" type="file" onchange="loadFileContent();" />
+
+
+            <h2 class="price">Total Price: <span id="totalPrice">0</span></h2>
+
           </div>
 
+          <div id="canvases">
+            <div id="flashMessage">
+              <h3 id="error">Error</h3>
+              <p id="exp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+              <button type="button" id="close">X</button>
+            </div>
+
+            <canvas class="can" id="canL1" width="900" height="540"></canvas>
+            <canvas class="can" id="canL2" width="900" height="540"></canvas>
+            <canvas class="can" id="bg" width="900" height="540"></canvas>
+            <canvas class="can" id="canL4" width="900" height="540"></canvas>
+            <button class="btn" type="button" id="editFloor">SAVE FLOOR</button>
+          </div>
+
+          <div id="right">
+            <h4 class="sectionTitle">SETTINGS</h4>
+
+            <button class="btn settings" type="button" id="grid">TURN SNAP GRID <b>OFF</b></button>
+            <button class="btn settings" type="button" id="grid">TURN SNAP GRID <b>OFF</b></button>
+
+            <br>
+            <br>
+            <br>
+            <h4 id="cabinets" class="sectionTitle">CABINETS</h4>
+            <canvas id="libCan" width="400" height="300"></canvas>
+          </div>
         </div>
       </div>
 
-      <div>
-        <input id="uploadText" style="width:120px" type="file" size="10"  onchange="loadFileContent();" />
-      </div>
 
 
         <script src="js/itemTypes.js" charset="utf-8"></script>
