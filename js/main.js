@@ -32,7 +32,16 @@ let clearBtn = document.getElementById('clear');
 let gridBtn = document.getElementById('grid');
 let floorBtn = document.getElementById('editFloor');
 let priceText = document.getElementById('totalPrice');
+let flash = document.getElementById('flashMessage');
+let errorTitle = document.getElementById('error');
+let errorDesc = document.getElementById('exp');
+let closeFlash = document.getElementById('close');
 
+
+// Initial message
+setTimeout(function(){
+  flashMessage("Start by drawing your Floor plan!", "You click anywhere inside the editor to start defining your floorsize. You can draw as many boxes as you like and let them overlap! <br>Press ESC to abort, while drawing a Box.", "succes");
+}, 600);
 
 // GRID
 let gridTurnedOn = true;
@@ -84,8 +93,17 @@ clearBtn.addEventListener("click", function(e) {
 // Check if editMode button is clicked
 floorBtn.addEventListener("click", function(e) {
   editFloor = !editFloor;
+  updateEditButton();
   update(mousePos = null, can1);
+  update(mousePos = null, can2);
+  update(mousePos = null, bg);
 });
+
+closeFlash.addEventListener("click", function(e) {
+  closeCurrentFlashMessage();
+});
+
+
 
 
 // Update Canvas on MouseMove
@@ -158,12 +176,13 @@ function update(mousePos, canvas) {
     let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
 
     // Turn element red if outside of floor
-    if (!isInsideFloor(placeholder)) {
+    if (!isInsideFloor(placeholder) && floor[0]) {
       placeholder.color = "red";
     }
 
-    placeholder.draw(currentContext)
-    console.log(isInsideFloor(placeholder));
+    if (!editFloor) {
+      placeholder.draw(currentContext)
+    }
   }
 
 
@@ -354,7 +373,7 @@ function placeBox (mousePos) {
         box.draw(currentContext);
         updatePrice();
       } else { // if not - then it cant be placed
-        alert("You cant place Items ontop of each other.");
+        flashMessage("Overlap!", "You cant place Items ontop of each other.", "error", 3000)
       }
 
     } else {
@@ -589,6 +608,7 @@ if (!Math.sign) {
     //                      // not a number, then x converts to number
   };
 }
+<<<<<<< HEAD
 function makeImg(){
 var b = document.getElementById('download')
 var can3 = document.getElementById('canL4');
@@ -599,4 +619,52 @@ ctx3.font = '28px sans-serif';
 ctx3.textAlign = 'left';
 ctx3.fillStyle = 'white'
 ctx3.fillText('total price = ' + totalPrice + ' kroner' ,20, 20);
+=======
+
+function flashMessage(title, message, type, duration) {
+  errorTitle.innerHTML = title;
+
+
+  if (message) {
+    errorDesc.innerHTML = message;
+  } else {
+    errorDesc.innerHTML = '';
+    errorDesc.style.display = 'none';
+  }
+
+  if (type === "succes") {
+    flash.style.borderLeft = "8px solid limegreen";
+  } else if (type === "error") {
+    flash.style.borderLeft = "8px solid red";
+  }
+
+  flash.style.opacity = 1;
+  flash.style.top = '95px';
+
+  if (!duration) {
+
+  } else {
+    setTimeout(function(){
+      closeCurrentFlashMessage()
+    }, duration);
+  }
+}
+
+function closeCurrentFlashMessage() {
+  flash.style.opacity = 0;
+  flash.style.top = '-30px';
+}
+
+
+
+
+function updateEditButton() {
+  if (!editFloor) {
+    floorBtn.innerHTML = "EDIT FLOOR"
+    floorBtn.style.background = "grey";
+  } else {
+    floorBtn.style.background = "limegreen";
+    floorBtn.innerHTML = "SAVE FLOOR"
+  }
+>>>>>>> betterControls
 }
