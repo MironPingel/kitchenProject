@@ -210,13 +210,14 @@ h4.sectionTitle	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^h4
 #exp	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#exp {$/;"	function	line:655
 .btn	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.btn {$/;"	function	line:659
 .btn:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.btn:hover {$/;"	function	line:673
-.buttonContainer	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.buttonContainer {$/;"	function	line:678
-.settings	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.settings {$/;"	function	line:683
-.settings:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.settings:hover {$/;"	function	line:691
-#editFloor	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#editFloor {$/;"	function	line:696
-#grid	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#grid {$/;"	function	line:706
-input[type="file"]	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^input[type="file"] {$/;"	function	line:713
-.custom-file-upload	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.custom-file-upload {$/;"	function	line:717
+.btn:focus	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.btn:focus {$/;"	function	line:678
+.buttonContainer	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.buttonContainer {$/;"	function	line:682
+.settings	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.settings {$/;"	function	line:687
+.settings:hover	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.settings:hover {$/;"	function	line:695
+#editFloor	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#editFloor {$/;"	function	line:700
+#grid	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^#grid {$/;"	function	line:710
+input[type="file"]	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^input[type="file"] {$/;"	function	line:717
+.custom-file-upload	/Users/miron/DEV/kitchenProject/kitchenProject/css/main.css	/^.custom-file-upload {$/;"	function	line:721
 setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^setTimeout(function(){$/;"	function	line:46
 update	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function update(mousePos, canvas) {$/;"	function	line:151
 drawingFloor.x	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^      drawingFloor = {$/;"	property	line:175
