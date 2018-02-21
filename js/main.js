@@ -19,7 +19,7 @@ let totalPrice = 0;
 let lastMousePos = null;
 
 let floor = [];
-let editFloor = true;
+let editFloor = false;
 let floorStartPoint = null;
 let drawingFloor = null;
 
@@ -150,7 +150,7 @@ function update(mousePos, canvas) {
     let placeholder = new Box(x, y, sel.width, sel.height, sel.color, sel.type, sel.price, sel.layer);
 
     // Turn element red if outside of floor
-    if (!isInsideFloor(placeholder)) {
+    if (editFloor && !isInsideFloor(placeholder)) {
       placeholder.color = "red";
     }
 
