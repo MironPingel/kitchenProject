@@ -19,7 +19,7 @@ let totalPrice = 0;
 let lastMousePos = null;
 
 let floor = [];
-let editFloor = false;
+let editFloor = true;
 let floorStartPoint = null;
 let drawingFloor = null;
 
@@ -183,8 +183,6 @@ function update(mousePos, canvas) {
     }
   }
 }
-
-
 
 
 

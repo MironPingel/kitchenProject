@@ -21,7 +21,7 @@ for (var type in itemTypes) {
 lib.addEventListener('click', function(evt) {
   let mousePos = getMousePos(lib, evt);
   for (var i = 0; i < drawnItems.length; i++) {
-    if (drawnItems[i].isClicked(mousePos)) {
+    if (drawnItems[i].isClicked(mousePos) && !editFloor) {
       selectedType = drawnItems[i].type;
       console.log(selectedType);
     }
