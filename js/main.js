@@ -614,13 +614,19 @@ var b = document.getElementById('download')
 var can3 = document.getElementById('canL4');
 var ctx3 = can3.getContext('2d');
 
+ctx3.beginPath();
+ctx3.rect(0, 0, can3.width, can3.height);
+ctx3.fillStyle = "white";
+ctx3.fill();
+
+ctx3.drawImage(bgCan, 0, 0);
 ctx3.drawImage(canL2, 0, 0);
 ctx3.drawImage(canL1, 0, 0);
 
 ctx3.font = '28px sans-serif';
 ctx3.textAlign = 'left';
-ctx3.fillStyle = 'white'
-ctx3.fillText('total price = ' + totalPrice + ' kroner' ,20, 20);
+ctx3.fillStyle = 'grey'
+ctx3.fillText('Total Price: ' + totalPrice + ' DKR' ,20, 20);
 
 }
 
