@@ -582,3 +582,10 @@ if (!Math.sign) {
     //                      // not a number, then x converts to number
   };
 }
+function makeImg(){
+var b = document.getElementById('download')
+var can3 = document.getElementById('canL4');
+var ctx3 = can3.getContext('2d');
+ctx3.drawImage(canL1, 0, 0);
+ctx3.drawImage(canL2, 0, 0);
+}
