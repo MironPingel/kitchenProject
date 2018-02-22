@@ -54,7 +54,7 @@ let saveBtn = document.getElementById('save');
 
 //Initial message
 setTimeout(function(){
-  flashMessage("Start by drawing your Floor plan!", "You click anywhere inside the editor to start defining your floorsize. You can draw as many boxes as you like and let them overlap! <br>Press ESC to abort, while drawing a Box.", "succes");
+  flashMessage("Start by drawing your Floor plan!", "You click anywhere inside the editor to start defining your floorsize. You can draw as many boxes as you like and let them overlap! <br>Press ESC to abort, while drawing a Box.", "succes", 7000);
 }, 600);
 
 // GRID
@@ -289,10 +289,14 @@ document.addEventListener("keypress", function(event) {
 
 // Listen for ESC press (to abort drawing of Floor)
 document.addEventListener("keyup", function(event) {
-    if (event.keyCode == 27) {
+    if (editFloor && event.keyCode == 27) {
       floorStartPoint = null;
       drawingFloor = null;
       update(mousePos = null, can1);
+    } else if (!editFloor && selectedType && event.keyCode == 27) {
+      selectedType = null;
+      update(mousePos = null, can1)
+      update(mousePos = null, can2)
     }
 });
 
@@ -695,7 +699,7 @@ ctx3.drawImage(canL1, 0, 0);
 ctx3.font = '28px sans-serif';
 ctx3.textAlign = 'left';
 ctx3.fillStyle = 'grey'
-ctx3.fillText('Total Price: ' + totalPrice + ' DKR' ,20, 20);
+ctx3.fillText('Total Price: ' + totalPrice + ' DKR' ,40, 60);
 
 }
 
@@ -783,9 +787,15 @@ function loadFileContent() {
 
       items = itemObjects;
       floor = stateFromFile.floor;
+
+      if (editFloor) {
+        editFloor = false;
+      }
+
       update(mousePos = null, can1);
       update(mousePos = null, can2);
       update(mousePos = null, bg);
+      updatePrice();
     })
    };
 };
