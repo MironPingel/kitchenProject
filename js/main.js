@@ -274,7 +274,7 @@ function update(mousePos, canvas) {
 
 // Listen for r press (to rotate)
 document.addEventListener("keypress", function(event) {
-    if (event.keyCode == 114) {
+    if (event.keyCode == 114 && event.keyCode == 82) {
       if (cs) {
         rotateItem(cs);
         update(mousePos = null, currentCan)
