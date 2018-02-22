@@ -42,6 +42,7 @@ let drawingFloor = null;
 // CONTROLLS & HTML ELEMENTS
 //let clearBtn = document.getElementById('clear');
 let gridBtn = document.getElementById('grid');
+let gridVis = document.getElementById('gridVis');
 let floorBtn = document.getElementById('editFloor');
 let priceText = document.getElementById('totalPrice');
 let flash = document.getElementById('flashMessage');
@@ -114,6 +115,19 @@ floorBtn.addEventListener("click", function(e) {
 // Check if close button of flash message was clicked
 closeFlash.addEventListener("click", function(e) {
   closeCurrentFlashMessage();
+});
+
+// Check if gridVis button was clicked
+gridVis.addEventListener("click", function(e) {
+  gridVisible = !gridVisible;
+
+  if (gridVisible) {
+    gridVis.innerHTML = "SHOW GRID";
+  } else {
+    gridVis.innerHTML = "HIDE GRID";
+  }
+
+  update(mousePos = null, can1);
 });
 
 // Check if save button was clicked
@@ -198,6 +212,10 @@ function update(mousePos, canvas) {
     mousePos = lastMousePos;
   } else {
     lastMousePos = mousePos;
+  }
+
+  if (gridVisible) {
+    drawGrid();
   }
 
   let context = canvas.getContext("2d");
@@ -417,6 +435,8 @@ function placeBox (mousePos) {
         flashMessage("Overlap!", "You cant place Items ontop of each other.", "error", 3000)
       }
 
+    } else if (floor[0] && !isInsideFloor(box)) {
+      flashMessage("Outside of the floor!", "You cant place Items outside of the floor you have defined.", "error", 3000)
     } else {
       items.push(box);
       box.draw(currentContext);
@@ -655,6 +675,12 @@ var b = document.getElementById('download')
 var can3 = document.getElementById('canL4');
 var ctx3 = can3.getContext('2d');
 
+// Remove all not placed items (red boxes)
+selectedType = null;
+update(mousePos = null, can1);
+update(mousePos = null, can2);
+update(mousePos = null, bg);
+
 ctx3.beginPath();
 ctx3.rect(0, 0, can3.width, can3.height);
 ctx3.fillStyle = "white";
@@ -703,7 +729,7 @@ function flashMessage(title, message, type, duration) {
 
 function closeCurrentFlashMessage() {
   flash.style.opacity = 0;
-  flash.style.left = '150px';
+  flash.style.left = '-850px';
 }
 
 
@@ -749,7 +775,7 @@ function loadFileContent() {
       // Turn boxes into box objects before passing them to items array
       let itemObjects = [];
       for(let obj of stateFromFile.items) {
-        let box = new Box(obj.x, obj.y, obj.width, obj.height, obj.color, obj.type, obj.price, obj.layer);
+        let box = new Box(obj.x+obj.width/2, obj.y+obj.height/2, obj.width, obj.height, obj.color, obj.type, obj.price, obj.layer);
         itemObjects.push(box);
       }
 
