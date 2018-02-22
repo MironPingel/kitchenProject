@@ -377,25 +377,25 @@ drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function dr
 drawGrid	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function drawGrid() {$/;"	function	line:589
 Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	function	line:623
 Box	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function Box (x, y, width, height, color, type, price, layer) {$/;"	class	line:623
-sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^  Math.sign = function(x) {$/;"	function	line:655
-Math.sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^if (!Math.sign) {$/;"	function	line:654
-makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function makeImg(){$/;"	function	line:673
-makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function makeImg(){$/;"	function	line:673
-flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:701
-setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    setTimeout(function(){$/;"	function	line:724
-flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:701
-closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function closeCurrentFlashMessage() {$/;"	function	line:730
-closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function closeCurrentFlashMessage() {$/;"	function	line:730
-updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updateEditButton() {$/;"	function	line:738
-updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updateEditButton() {$/;"	function	line:738
-saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:755
-saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:755
-loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadFileContent() {$/;"	function	line:767
-onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^   oFReader.onload = function (oFREvent) {$/;"	function	line:770
-loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    loadJSON(oFREvent.target.result, function(fileContent) {$/;"	function	line:772
-oFReader.onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^   oFReader.readAsDataURL(document.getElementById("uploadText").files[0]);$/;"	function	line:769
-loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadFileContent() {$/;"	function	line:767
-loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadJSON(url, callback) {$/;"	function	line:792
-onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    xobj.onreadystatechange = function() {$/;"	function	line:796
-xobj.onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    xobj.open('GET', url, true);$/;"	function	line:795
-loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadJSON(url, callback) {$/;"	function	line:792
+sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^  Math.sign = function(x) {$/;"	function	line:657
+Math.sign	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^if (!Math.sign) {$/;"	function	line:656
+makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function makeImg(){$/;"	function	line:675
+makeImg	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function makeImg(){$/;"	function	line:675
+flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:703
+setTimeout	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    setTimeout(function(){$/;"	function	line:726
+flashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function flashMessage(title, message, type, duration) {$/;"	function	line:703
+closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function closeCurrentFlashMessage() {$/;"	function	line:732
+closeCurrentFlashMessage	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function closeCurrentFlashMessage() {$/;"	function	line:732
+updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updateEditButton() {$/;"	function	line:740
+updateEditButton	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function updateEditButton() {$/;"	function	line:740
+saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:757
+saveCurrentStateToFile	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function saveCurrentStateToFile(text, name, type) {$/;"	function	line:757
+loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadFileContent() {$/;"	function	line:769
+onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^   oFReader.onload = function (oFREvent) {$/;"	function	line:772
+loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    loadJSON(oFREvent.target.result, function(fileContent) {$/;"	function	line:774
+oFReader.onload	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^   oFReader.readAsDataURL(document.getElementById("uploadText").files[0]);$/;"	function	line:771
+loadFileContent	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadFileContent() {$/;"	function	line:769
+loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadJSON(url, callback) {$/;"	function	line:794
+onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    xobj.onreadystatechange = function() {$/;"	function	line:798
+xobj.onreadystatechange	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^    xobj.open('GET', url, true);$/;"	function	line:797
+loadJSON	/Users/miron/DEV/kitchenProject/kitchenProject/js/main.js	/^function loadJSON(url, callback) {$/;"	function	line:794

@@ -635,6 +635,8 @@ function Box (x, y, width, height, color, type, price, layer) {
     context.rect(this.x, this.y, this.width, this.height);
     context.fillStyle = this.color;
     context.fill();
+    context.strokeStyle = "grey";
+    context.stroke();
   }
 
   this.isClicked = (mousePos) => {
